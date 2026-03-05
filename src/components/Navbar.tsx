@@ -134,7 +134,7 @@ export default function Navbar() {
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-72"
                       >
-                        <div className="glass border border-white/10 rounded-2xl overflow-hidden shadow-2xl p-2">
+                        <div className="bg-background/85 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden shadow-2xl p-2">
                           {link.dropdown && (
                             <div className="space-y-1">
                               {link.dropdown.map((subItem) => (
@@ -218,7 +218,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="xl:hidden glass border-t border-white/5 overflow-hidden"
+            className="xl:hidden bg-background/85 backdrop-blur-xl border-t border-white/5 overflow-hidden"
           >
             <div className="px-4 pt-4 pb-8 space-y-2">
               {navLinks.map((link) => (
