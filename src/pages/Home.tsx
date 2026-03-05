@@ -50,7 +50,7 @@ export default function Home() {
             className="flex flex-wrap items-center justify-center gap-4"
           >
             <Link
-              to="/projects"
+              to="/website-projects"
               className="group px-10 py-5 bg-white text-background rounded-full font-bold text-xl hover:scale-105 transition-all flex items-center gap-2"
             >
               Explore Our Work

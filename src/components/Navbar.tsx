@@ -23,9 +23,11 @@ const navLinks: NavItem[] = [
   {
     name: "Portfolio",
     dropdown: [
-      { name: "Projects", href: "/projects", desc: "Explore our latest digital creations" },
-      { name: "Case Studies", href: "/case-studies", desc: "In-depth look at our success stories" },
-      { name: "Tech Stack", href: "/tech-stack", desc: "The modern technologies we use" },
+      { name: "Website Projects", href: "/website-projects", desc: "Professional web platforms" },
+      { name: "Creative Digital Projects", href: "/creative-projects", desc: "Interactive experiences" },
+      { name: "AI Powered Softwares", href: "/ai-softwares", desc: "Smart AI solutions" },
+      { name: "Case Studies", href: "/case-studies", desc: "Success stories" },
+      { name: "Tech Stack", href: "/tech-stack", desc: "Technologies we use" },
     ],
   },
   {

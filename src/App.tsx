@@ -7,7 +7,9 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import Projects from "./pages/Projects";
+import WebsiteProjects from "./pages/WebsiteProjects";
+import CreativeProjects from "./pages/CreativeProjects";
+import AISoftwares from "./pages/AISoftwares";
 import ProjectDetail from "./pages/ProjectDetail";
 import TechStack from "./pages/TechStack";
 import YouthInnovation from "./pages/YouthInnovation";
@@ -52,7 +54,9 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/website-projects" element={<WebsiteProjects />} />
+          <Route path="/creative-projects" element={<CreativeProjects />} />
+          <Route path="/ai-softwares" element={<AISoftwares />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/tech-stack" element={<TechStack />} />
           <Route path="/youth-innovation" element={<YouthInnovation />} />
