@@ -31,7 +31,7 @@ export default function YouthInnovation() {
             transition={{ delay: 0.2 }}
             className="text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed"
           >
-            Beulex Digital Studio is committed to empowering young people across the nation by 
+            BEULEX is committed to empowering young people across the nation by 
             providing training, inspiration, and the tools they need to become future tech leaders.
           </motion.p>
         </div>

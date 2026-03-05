@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="pb-12 flex flex-col md:flex-row justify-between items-center gap-6 text-zinc-500 text-sm font-mono uppercase tracking-widest">
-          <div>© 2026 Beulex Digital Studio. All rights reserved.</div>
+          <div>© 2026 BEULEX. All rights reserved.</div>
           <div>Designed & Developed by <span className="text-white">Dinusha Pushparajah</span></div>
         </div>
       </div>

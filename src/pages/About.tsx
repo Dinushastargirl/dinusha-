@@ -57,7 +57,7 @@ export default function About() {
             <div className="aspect-video rounded-2xl overflow-hidden glass border-white/10 p-2">
               <img
                 src="https://picsum.photos/seed/studio/1200/800"
-                alt="Beulex Digital Studio"
+                alt="BEULEX"
                 className="w-full h-full object-cover rounded-xl"
                 referrerPolicy="no-referrer"
               />
@@ -108,7 +108,7 @@ export default function About() {
                 A visionary <span className="text-white font-medium">Full Stack Developer</span>, 
                 <span className="text-white font-medium">Creative Technologist</span>, and 
                 <span className="text-white font-medium">Young Tech Entrepreneur</span>. 
-                Dinusha is the driving force behind Beulex Digital Studio and the founder of SLMC².
+                Dinusha is the driving force behind BEULEX and the founder of SLMC².
               </p>
               <p>
                 His journey is fueled by a deep passion for technology and an entrepreneurial mindset that 
