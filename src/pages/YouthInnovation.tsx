@@ -96,7 +96,7 @@ export default function YouthInnovation() {
               title: "Tech Mentorship",
               desc: "Direct guidance from industry experts in programming, design, and digital entrepreneurship.",
               icon: Users,
-              color: "text-accent-cyan",
+              color: "text-accent-magenta",
             },
             {
               title: "Innovation Workshops",

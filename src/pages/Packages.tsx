@@ -20,8 +20,8 @@ const packages = [
       "Free Domain (1 Year)",
       "Free Hosting (1 Year)"
     ],
-    color: "text-accent-cyan",
-    borderColor: "border-accent-cyan/20"
+    color: "text-accent-magenta",
+    borderColor: "border-accent-magenta/20"
   },
   {
     id: "business",
@@ -108,7 +108,7 @@ export default function Packages() {
     <div className="pt-32 pb-24 bg-background relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent-magenta/5 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent-magenta/5 rounded-full blur-[120px]" />
       </div>
 
@@ -117,7 +117,7 @@ export default function Packages() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-cyan text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-magenta text-sm font-medium mb-8"
           >
             <Star size={16} />
             <span>Transparent Pricing</span>
@@ -127,7 +127,7 @@ export default function Packages() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-8xl font-display font-bold mb-8 leading-tight"
           >
-            Digital <span className="text-gradient-cyan">Packages</span>
+            Digital <span className="text-gradient-magenta">Packages</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -149,10 +149,10 @@ export default function Packages() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`relative p-8 rounded-[40px] glass border ${pkg.popular ? 'border-accent-cyan/40 scale-105 z-20 shadow-2xl shadow-accent-cyan/10' : 'border-white/5'} flex flex-col h-full group hover:border-white/20 transition-all duration-500`}
+              className={`relative p-8 rounded-[40px] glass border ${pkg.popular ? 'border-accent-magenta/40 scale-105 z-20 shadow-2xl shadow-accent-magenta/10' : 'border-white/5'} flex flex-col h-full group hover:border-white/20 transition-all duration-500`}
             >
               {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-accent-cyan text-background text-[10px] font-bold uppercase tracking-widest rounded-full">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-accent-magenta text-background text-[10px] font-bold uppercase tracking-widest rounded-full">
                   Most Popular
                 </div>
               )}
@@ -185,7 +185,7 @@ export default function Packages() {
                 to="/contact"
                 className={`w-full py-4 rounded-full font-bold text-center transition-all ${
                   pkg.popular 
-                    ? 'bg-accent-cyan text-background hover:scale-105' 
+                    ? 'bg-accent-magenta text-background hover:scale-105' 
                     : 'glass text-white hover:bg-white/10 border border-white/10'
                 }`}
               >
@@ -212,7 +212,7 @@ export default function Packages() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {localFeatures.map((feat, i) => (
                 <div key={i} className="flex items-center gap-4 p-4 rounded-2xl glass border-white/5">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-accent-cyan">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-accent-magenta">
                     <feat.icon size={20} />
                   </div>
                   <span className="text-sm font-medium text-zinc-300">{feat.label}</span>
@@ -250,7 +250,7 @@ export default function Packages() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="p-12 rounded-[40px] bg-gradient-to-br from-accent-cyan/10 to-accent-magenta/10 border border-white/10 text-center"
+          className="p-12 rounded-[40px] bg-gradient-to-br from-accent-magenta/10 to-accent-magenta/10 border border-white/10 text-center"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-white/10 text-accent-green text-xs font-mono mb-6">
             <Shield size={14} />

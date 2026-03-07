@@ -12,23 +12,26 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-32">
           <div className="md:col-span-6">
-            <Link to="/" className="flex items-center gap-2 mb-8 group">
-              <div className="w-12 h-12 bg-accent-cyan rounded-xl flex items-center justify-center neon-glow-cyan transition-transform group-hover:rotate-12">
-                <Code2 className="text-background" size={28} />
-              </div>
+            <Link to="/" className="flex items-center gap-3 mb-8 group">
+              <img 
+                src="https://i.postimg.cc/Xv3wSzdS/Untitled-design.png" 
+                alt="BEULEX Logo" 
+                className="w-16 h-16 object-contain group-hover:rotate-12 transition-transform duration-300"
+                referrerPolicy="no-referrer"
+              />
               <span className="text-3xl font-display font-bold tracking-tighter">
-                BEULEX<span className="text-accent-cyan">.</span>
+                BEULEX<span className="text-accent-magenta">.</span>
               </span>
             </Link>
             <p className="text-zinc-400 text-2xl max-w-md font-display font-medium leading-tight mb-12">
-              Engineering high-performance digital experiences for the next generation.
+              Creating a revolution to revaluate people's lives.
             </p>
             <div className="flex gap-4">
               {[
-                { icon: Github, href: "#", color: "hover:text-accent-cyan" },
+                { icon: Github, href: "#", color: "hover:text-accent-magenta" },
                 { icon: Linkedin, href: "#", color: "hover:text-accent-magenta" },
-                { icon: Twitter, href: "#", color: "hover:text-accent-green" },
-                { icon: Globe, href: "#", color: "hover:text-blue-500" }
+                { icon: Twitter, href: "#", color: "hover:text-accent-magenta" },
+                { icon: Globe, href: "#", color: "hover:text-accent-magenta" }
               ].map((social, i) => (
                 <a 
                   key={i}

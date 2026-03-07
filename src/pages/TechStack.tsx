@@ -6,8 +6,8 @@ const techStack = [
     category: "Frontend",
     icon: Layout,
     skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "Framer Motion", "Redux", "Zustand"],
-    color: "text-accent-cyan",
-    bg: "bg-accent-cyan/10",
+    color: "text-accent-magenta",
+    bg: "bg-accent-magenta/10",
   },
   {
     category: "Backend",
@@ -85,7 +85,7 @@ export default function TechStack() {
 
         {/* Philosophy Section */}
         <div className="mt-32 p-12 rounded-[40px] glass border-white/10 text-center">
-          <TerminalSquare className="text-accent-cyan mx-auto mb-8" size={48} />
+          <TerminalSquare className="text-accent-magenta mx-auto mb-8" size={48} />
           <h2 className="text-3xl font-display font-bold mb-6 tracking-tight">Our Technology Philosophy</h2>
           <p className="text-zinc-400 text-lg max-w-3xl mx-auto leading-relaxed">
             We don't just follow trends; we choose technologies that offer the best balance of performance, 

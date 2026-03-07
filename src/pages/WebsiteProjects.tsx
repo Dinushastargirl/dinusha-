@@ -81,7 +81,7 @@ export default function WebsiteProjects() {
                     {project.id === "under-development" ? (
                       <div className="absolute inset-0 bg-background/80 flex items-center justify-center">
                         <div className="px-8 py-4 glass border-white/20 text-white rounded-full font-bold flex items-center gap-2">
-                          <Beaker className="text-accent-cyan" size={20} />
+                          <Beaker className="text-accent-magenta" size={20} />
                           Under Development
                         </div>
                       </div>
@@ -123,7 +123,7 @@ export default function WebsiteProjects() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-6 py-2 rounded-full bg-accent-cyan text-background text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all flex items-center gap-2"
+                        className="px-6 py-2 rounded-full bg-accent-magenta text-background text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all flex items-center gap-2"
                       >
                         Live Demo
                         <ExternalLink size={14} />

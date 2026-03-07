@@ -19,7 +19,7 @@ export default function ProjectDetail() {
               ? "This project is currently in the works. Stay tuned for updates!" 
               : "The project you are looking for doesn't exist or has been moved."}
           </p>
-          <Link to="/projects" className="text-accent-cyan flex items-center gap-2 justify-center hover:underline">
+          <Link to="/projects" className="text-accent-magenta flex items-center gap-2 justify-center hover:underline">
             <ArrowLeft size={20} />
             Back to Projects
           </Link>
@@ -95,7 +95,7 @@ export default function ProjectDetail() {
           <div className="lg:col-span-2 space-y-12">
             <section>
               <h2 className="text-3xl font-display font-bold mb-6 flex items-center gap-3">
-                <Sparkles className="text-accent-cyan" size={24} />
+                <Sparkles className="text-accent-magenta" size={24} />
                 Project Overview
               </h2>
               <p className="text-zinc-400 text-xl leading-relaxed">
@@ -104,8 +104,8 @@ export default function ProjectDetail() {
             </section>
 
             {project.caseStudy && (
-              <section className="p-10 rounded-[40px] glass border-white/10 bg-accent-cyan/5">
-                <h2 className="text-3xl font-display font-bold mb-8 text-accent-cyan">Case Study</h2>
+              <section className="p-10 rounded-[40px] glass border-white/10 bg-accent-magenta/5">
+                <h2 className="text-3xl font-display font-bold mb-8 text-accent-magenta">Case Study</h2>
                 <div className="space-y-8">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">The Challenge</h3>
@@ -122,7 +122,7 @@ export default function ProjectDetail() {
                   <div className="grid grid-cols-2 gap-4 pt-4">
                     {project.caseStudy.metrics.map((m, i) => (
                       <div key={i} className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                        <div className="text-2xl font-bold text-accent-cyan">{m.value}</div>
+                        <div className="text-2xl font-bold text-accent-magenta">{m.value}</div>
                         <div className="text-xs text-zinc-500 uppercase tracking-widest">{m.label}</div>
                       </div>
                     ))}
@@ -151,7 +151,7 @@ export default function ProjectDetail() {
                 {project.tech.map((t) => (
                   <div key={t} className="flex items-center justify-between text-sm">
                     <span className="text-zinc-400">{t}</span>
-                    <div className="w-2 h-2 rounded-full bg-accent-cyan" />
+                    <div className="w-2 h-2 rounded-full bg-accent-magenta" />
                   </div>
                 ))}
               </div>
@@ -161,7 +161,7 @@ export default function ProjectDetail() {
               <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
                 Let's discuss how we can bring your vision to life with modern technology and creative design.
               </p>
-              <Link to="/contact" className="w-full py-4 bg-accent-cyan text-background rounded-full font-bold flex items-center justify-center gap-2 hover:scale-105 transition-all">
+              <Link to="/contact" className="w-full py-4 bg-accent-magenta text-background rounded-full font-bold flex items-center justify-center gap-2 hover:scale-105 transition-all">
                 Start a Project
               </Link>
             </div>

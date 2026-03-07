@@ -10,7 +10,7 @@ export default function CaseStudies() {
     <div className="pt-32 pb-24 bg-background relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent-magenta/5 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent-magenta/5 rounded-full blur-[120px]" />
       </div>
 
@@ -19,7 +19,7 @@ export default function CaseStudies() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-cyan text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-magenta text-sm font-medium mb-8"
           >
             <TrendingUp size={16} />
             <span>Measurable Results</span>
@@ -29,7 +29,7 @@ export default function CaseStudies() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-8xl font-display font-bold mb-8 leading-tight"
           >
-            Professional <span className="text-accent-cyan">Case Studies</span>
+            Professional <span className="text-accent-magenta">Case Studies</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export default function CaseStudies() {
                 <div className="grid grid-cols-2 gap-4">
                   {project.caseStudy?.metrics.map((metric, i) => (
                     <div key={i} className="p-6 rounded-3xl glass border-white/5 text-center">
-                      <div className="text-3xl font-display font-bold text-accent-cyan mb-1">{metric.value}</div>
+                      <div className="text-3xl font-display font-bold text-accent-magenta mb-1">{metric.value}</div>
                       <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest">{metric.label}</div>
                     </div>
                   ))}
@@ -72,7 +72,7 @@ export default function CaseStudies() {
               </div>
 
               <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-cyan/10 text-accent-cyan text-xs font-mono mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-magenta/10 text-accent-magenta text-xs font-mono mb-6">
                   <Target size={14} />
                   <span>CASE STUDY: {project.title.toUpperCase()}</span>
                 </div>
@@ -103,7 +103,7 @@ export default function CaseStudies() {
 
                   <section>
                     <h3 className="text-xl font-display font-bold mb-4 flex items-center gap-2">
-                      <TrendingUp className="text-accent-cyan" size={20} />
+                      <TrendingUp className="text-accent-magenta" size={20} />
                       The Result
                     </h3>
                     <p className="text-zinc-400 text-lg leading-relaxed">
@@ -126,7 +126,7 @@ export default function CaseStudies() {
 
         {/* CTA */}
         <div className="mt-32 p-16 rounded-[40px] glass border-white/10 text-center relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-accent-cyan/10 to-transparent pointer-events-none" />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-accent-magenta/10 to-transparent pointer-events-none" />
           <h2 className="text-4xl font-display font-bold mb-6 relative z-10">Ready to achieve similar results?</h2>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto mb-10 relative z-10">
             Let's discuss how we can apply our expertise to solve your business challenges and 
@@ -134,7 +134,7 @@ export default function CaseStudies() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-10 py-5 bg-accent-cyan text-background rounded-full font-bold text-lg hover:scale-105 transition-all relative z-10"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-accent-magenta text-background rounded-full font-bold text-lg hover:scale-105 transition-all relative z-10"
           >
             Start Your Project
             <ArrowRight size={20} />

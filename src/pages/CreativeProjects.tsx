@@ -16,7 +16,7 @@ export default function CreativeProjects() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-display font-bold mb-6"
           >
-            Creative <span className="text-accent-cyan">Digital Projects</span>
+            Creative <span className="text-accent-magenta">Digital Projects</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export default function CreativeProjects() {
                     {project.id === "under-development" ? (
                       <div className="absolute inset-0 bg-background/80 flex items-center justify-center">
                         <div className="px-8 py-4 glass border-white/20 text-white rounded-full font-bold flex items-center gap-2">
-                          <Beaker className="text-accent-cyan" size={20} />
+                          <Beaker className="text-accent-magenta" size={20} />
                           Under Development
                         </div>
                       </div>
@@ -75,7 +75,7 @@ export default function CreativeProjects() {
               </div>
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-3xl font-display font-bold mb-3 group-hover:text-accent-cyan transition-colors">
+                  <h3 className="text-3xl font-display font-bold mb-3 group-hover:text-accent-magenta transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-zinc-400 text-lg leading-relaxed max-w-lg mb-6">

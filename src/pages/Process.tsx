@@ -8,8 +8,8 @@ const steps = [
     title: "Discovery & Strategy",
     description: "We dive deep into your business goals, target audience, and market landscape to define a clear roadmap for success.",
     icon: Search,
-    color: "text-accent-cyan",
-    bg: "bg-accent-cyan/10",
+    color: "text-accent-magenta",
+    bg: "bg-accent-magenta/10",
     details: ["Market Research", "User Personas", "Technical Audit", "Project Roadmap"]
   },
   {

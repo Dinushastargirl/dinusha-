@@ -11,7 +11,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-accent-cyan font-mono text-xs uppercase tracking-[0.3em] mb-4"
+            className="text-accent-magenta font-mono text-xs uppercase tracking-[0.3em] mb-4"
           >
             The Studio
           </motion.div>
@@ -37,7 +37,7 @@ export default function About() {
             <div>
               <h2 className="text-4xl font-display font-bold mb-6">Our Mission</h2>
               <p className="text-zinc-400 text-xl leading-tight max-w-xl">
-                Beulex is a creative powerhouse where technology meets innovation. We specialize in crafting high-performance digital experiences that empower businesses to scale and thrive in the modern era.
+                The mission of Beulex is to help 1000 small businesses to scale up their business online.
               </p>
             </div>
             <div className="flex gap-4">
@@ -61,7 +61,7 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-display font-bold mb-2">Our Vision</h3>
               <p className="text-zinc-500 text-sm">
-                To be a leader in the digital landscape, fostering a community of young innovators and tech leaders.
+                Create a revolution to revaluate people's life.
               </p>
             </div>
             <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center">
@@ -85,7 +85,7 @@ export default function About() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-8 flex flex-col justify-end">
               <h3 className="text-3xl font-display font-bold">Dinusha Pushparajah</h3>
-              <p className="text-accent-cyan font-mono text-xs uppercase tracking-widest">Founder & CEO</p>
+              <p className="text-accent-magenta font-mono text-xs uppercase tracking-widest">Founder & CEO</p>
             </div>
           </motion.div>
 
@@ -98,17 +98,17 @@ export default function About() {
             className="md:col-span-7 bento-card p-10 flex flex-col justify-between"
           >
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-white/10 text-accent-cyan text-xs font-mono mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-white/10 text-accent-magenta text-xs font-mono mb-6">
                 <User size={14} />
                 <span>MEET THE FOUNDER</span>
               </div>
               <p className="text-zinc-400 text-lg leading-tight mb-8">
-                A visionary Full Stack Developer, Creative Technologist, and Young Tech Entrepreneur. Dinusha is the driving force behind BEULEX and the founder of SLMC².
+                Beulex was founded by Dinusha Pushparajah, a young evolving Entrepreneur. Dinusha is the driving force behind BEULEX and the founder of SLMC².
               </p>
               <div className="space-y-4">
                 {["Startup Mindset", "Impact Driven", "Creative Engineering"].map(item => (
                   <div key={item} className="flex items-center gap-3 text-sm text-zinc-300">
-                    <CheckCircle2 className="text-accent-cyan" size={16} />
+                    <CheckCircle2 className="text-accent-magenta" size={16} />
                     {item}
                   </div>
                 ))}
@@ -144,7 +144,7 @@ export default function About() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <h2 className="text-4xl md:text-7xl font-display font-bold tracking-tighter">
               BEYOND <br />
-              <span className="text-gradient-cyan">CODE</span>
+              <span className="text-gradient-magenta">CODE</span>
             </h2>
             <p className="text-zinc-500 max-w-xs text-right font-mono text-xs uppercase tracking-widest">
               A glimpse into the journey of building impactful digital solutions.

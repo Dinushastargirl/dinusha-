@@ -77,15 +77,13 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-2 group">
-            <motion.div
-              initial={{ rotate: 0 }}
-              whileHover={{ rotate: 180 }}
-              transition={{ duration: 0.5 }}
-              className="w-10 h-10 bg-accent-magenta rounded-lg flex items-center justify-center neon-glow-magenta"
-            >
-              <Code2 className="text-background" size={24} />
-            </motion.div>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img 
+              src="https://i.postimg.cc/Xv3wSzdS/Untitled-design.png" 
+              alt="BEULEX Logo" 
+              className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
+              referrerPolicy="no-referrer"
+            />
             <span className="text-xl font-display font-bold tracking-tight">
               BEULEX<span className="text-accent-magenta">.</span>
             </span>

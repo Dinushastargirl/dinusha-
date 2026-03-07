@@ -11,7 +11,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-8xl font-display font-bold mb-8 leading-tight"
           >
-            Let's <span className="text-accent-cyan">Connect</span>
+            Let's <span className="text-accent-magenta">Connect</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function Contact() {
             </p>
             <div className="space-y-8">
               <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 rounded-2xl glass border-white/10 flex items-center justify-center text-accent-cyan group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-2xl glass border-white/10 flex items-center justify-center text-accent-magenta group-hover:scale-110 transition-transform">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -71,7 +71,7 @@ export default function Contact() {
             <div className="mt-16 pt-16 border-t border-white/5">
               <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm font-mono">Follow Us</h4>
               <div className="flex gap-4">
-                <a href="#" className="w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-zinc-400 hover:text-accent-cyan hover:border-accent-cyan/30 transition-all">
+                <a href="#" className="w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-zinc-400 hover:text-accent-magenta hover:border-accent-magenta/30 transition-all">
                   <Github size={20} />
                 </a>
                 <a href="#" className="w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-zinc-400 hover:text-accent-magenta hover:border-accent-magenta/30 transition-all">
@@ -97,16 +97,16 @@ export default function Contact() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-mono text-zinc-400 uppercase tracking-widest">Name</label>
-                  <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent-cyan transition-colors" placeholder="John Doe" />
+                  <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent-magenta transition-colors" placeholder="John Doe" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-mono text-zinc-400 uppercase tracking-widest">Email</label>
-                  <input type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent-cyan transition-colors" placeholder="john@example.com" />
+                  <input type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent-magenta transition-colors" placeholder="john@example.com" />
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-mono text-zinc-400 uppercase tracking-widest">Subject</label>
-                <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent-cyan transition-colors appearance-none">
+                <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent-magenta transition-colors appearance-none">
                   <option className="bg-background">Web Development</option>
                   <option className="bg-background">UI/UX Design</option>
                   <option className="bg-background">Startup MVP</option>
@@ -115,7 +115,7 @@ export default function Contact() {
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-mono text-zinc-400 uppercase tracking-widest">Message</label>
-                <textarea rows={4} className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent-cyan transition-colors resize-none" placeholder="Tell us about your project..." />
+                <textarea rows={4} className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent-magenta transition-colors resize-none" placeholder="Tell us about your project..." />
               </div>
               <button className="w-full py-5 bg-white text-background rounded-full font-bold text-lg hover:scale-105 transition-all flex items-center justify-center gap-2 group">
                 Send Message

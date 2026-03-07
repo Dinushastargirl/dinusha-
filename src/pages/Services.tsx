@@ -8,8 +8,8 @@ const services = [
     description: "High-performance, responsive websites built with the latest technologies to ensure speed and scalability.",
     benefits: ["SEO Optimized", "Mobile First", "Lightning Fast", "Secure Architecture"],
     icon: Code,
-    color: "text-accent-cyan",
-    bg: "bg-accent-cyan/10",
+    color: "text-accent-magenta",
+    bg: "bg-accent-magenta/10",
     size: "md:col-span-8"
   },
   {
@@ -49,7 +49,7 @@ export default function Services() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-accent-cyan font-mono text-xs uppercase tracking-[0.3em] mb-4"
+            className="text-accent-magenta font-mono text-xs uppercase tracking-[0.3em] mb-4"
           >
             Capabilities
           </motion.div>
@@ -103,7 +103,7 @@ export default function Services() {
 
         {/* Extra Info Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-          <div className="bento-card p-8 bg-accent-cyan/5 border-accent-cyan/10">
+          <div className="bento-card p-8 bg-accent-magenta/5 border-accent-magenta/10">
             <h4 className="text-xl font-bold mb-2">Performance First</h4>
             <p className="text-zinc-500 text-sm">We optimize every line of code for maximum speed and SEO efficiency.</p>
           </div>

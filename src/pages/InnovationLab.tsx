@@ -11,7 +11,7 @@ export default function InnovationLab() {
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent-magenta/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent-magenta/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -45,7 +45,7 @@ export default function InnovationLab() {
         {/* Lab Focus Areas */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
           {[
-            { title: "AI & ML", desc: "Exploring neural networks and automated intelligence.", icon: Cpu, color: "text-accent-cyan" },
+            { title: "AI & ML", desc: "Exploring neural networks and automated intelligence.", icon: Cpu, color: "text-accent-magenta" },
             { title: "Web3 & Decentralization", desc: "Building the next generation of the distributed web.", icon: Globe, color: "text-accent-magenta" },
             { title: "High-Performance UI", desc: "Pushing the limits of browser rendering and interaction.", icon: Zap, color: "text-accent-green" },
           ].map((area, index) => (

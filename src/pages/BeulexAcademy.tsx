@@ -43,8 +43,8 @@ export default function BeulexAcademy() {
               title: "Digital Product Design",
               desc: "Master UI/UX design principles, user research, and prototyping with modern tools like Figma.",
               icon: BookOpen,
-              color: "text-accent-cyan",
-              bg: "bg-accent-cyan/10",
+              color: "text-accent-magenta",
+              bg: "bg-accent-magenta/10",
             },
             {
               title: "Full Stack Engineering",

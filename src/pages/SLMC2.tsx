@@ -5,14 +5,14 @@ export default function SLMC2() {
   return (
     <div className="pt-32 pb-24 bg-background relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-cyan/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-magenta/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-24">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-cyan text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-magenta text-sm font-medium mb-8"
           >
             <Calculator size={16} />
             <span>Founded by Dinusha Pushparajah</span>
@@ -23,7 +23,7 @@ export default function SLMC2() {
             className="text-5xl md:text-8xl font-display font-bold mb-8 leading-tight"
           >
             SLMC² — Sri Lanka <br />
-            <span className="text-accent-cyan">Mathematical Circle</span>
+            <span className="text-accent-magenta">Mathematical Circle</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ export default function SLMC2() {
               href="https://chat.whatsapp.com/BbKNlFjHcUQ2uBucvWzjXX"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-accent-cyan text-background rounded-full font-bold text-lg hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,255,0.3)]"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-accent-magenta text-background rounded-full font-bold text-lg hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,0,255,0.3)]"
             >
               <MessageSquare size={20} />
               Join our WhatsApp Community
@@ -75,7 +75,7 @@ export default function SLMC2() {
                 "Structured Problem Sessions",
               ].map((point) => (
                 <div key={point} className="flex items-center gap-3 p-4 rounded-2xl glass border-white/5">
-                  <CheckCircle2 className="text-accent-cyan" size={20} />
+                  <CheckCircle2 className="text-accent-magenta" size={20} />
                   <span className="text-white font-medium">{point}</span>
                 </div>
               ))}
@@ -98,8 +98,8 @@ export default function SLMC2() {
                 }}
               />
             </div>
-            <div className="absolute -top-6 -right-6 p-8 glass rounded-3xl border-accent-cyan/20 neon-glow-cyan">
-              <div className="text-4xl font-bold text-accent-cyan mb-1">SLMC²</div>
+            <div className="absolute -top-6 -right-6 p-8 glass rounded-3xl border-accent-magenta/20 neon-glow-magenta">
+              <div className="text-4xl font-bold text-accent-magenta mb-1">SLMC²</div>
               <div className="text-xs font-mono text-zinc-400 uppercase tracking-widest">Mathematical Culture</div>
             </div>
           </motion.div>
@@ -111,7 +111,7 @@ export default function SLMC2() {
               title: "Mathematical Reasoning",
               desc: "Developing the ability to analyze information and solve problems through pure logic and proof-based thinking.",
               icon: Brain,
-              color: "text-accent-cyan",
+              color: "text-accent-magenta",
             },
             {
               title: "Collaborative Learning",
@@ -148,9 +148,9 @@ export default function SLMC2() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-32 p-12 rounded-[40px] glass border border-accent-cyan/20 text-center relative overflow-hidden"
+          className="mt-32 p-12 rounded-[40px] glass border border-accent-magenta/20 text-center relative overflow-hidden"
         >
-          <div className="absolute top-0 left-0 w-full h-full bg-accent-cyan/5 pointer-events-none" />
+          <div className="absolute top-0 left-0 w-full h-full bg-accent-magenta/5 pointer-events-none" />
           <h2 className="text-4xl font-display font-bold mb-6 relative z-10">Join the Circle</h2>
           <p className="text-zinc-400 text-xl max-w-2xl mx-auto mb-10 relative z-10">
             Connect with like-minded professionals and academics. Let's cultivate a strong mathematical culture together.

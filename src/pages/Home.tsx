@@ -15,7 +15,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-cyan text-sm font-mono mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-magenta text-sm font-mono mb-8"
             >
               <Sparkles size={16} />
               <span>EST. 2024 • GLOBAL TECH STUDIO</span>
@@ -37,7 +37,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="max-w-xl text-zinc-400 text-xl md:text-2xl mb-12 leading-tight"
             >
-              We engineer high-performance digital experiences for the next generation of innovators.
+              On a mission to help 1000 small businesses scale up online and create a revolution to revaluate people's lives.
             </motion.p>
 
             <motion.div
@@ -78,7 +78,7 @@ export default function Home() {
           transition={{ duration: 2, repeat: Infinity }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 text-zinc-500"
         >
-          <div className="w-[1px] h-12 bg-gradient-to-b from-accent-cyan to-transparent mx-auto" />
+          <div className="w-[1px] h-12 bg-gradient-to-b from-accent-magenta to-transparent mx-auto" />
         </motion.div>
       </section>
 
@@ -103,7 +103,7 @@ export default function Home() {
               <Globe2 size={200} />
             </div>
             <div>
-              <div className="w-12 h-12 rounded-xl bg-accent-cyan/10 flex items-center justify-center text-accent-cyan mb-6">
+              <div className="w-12 h-12 rounded-xl bg-accent-magenta/10 flex items-center justify-center text-accent-magenta mb-6">
                 <Rocket size={24} />
               </div>
               <h3 className="text-4xl font-display font-bold mb-4">Web Engineering</h3>
@@ -111,7 +111,7 @@ export default function Home() {
                 Building lightning-fast, scalable web platforms using the most modern tech stacks available today.
               </p>
             </div>
-            <Link to="/services" className="flex items-center gap-2 text-accent-cyan font-mono text-sm uppercase tracking-widest group">
+            <Link to="/services" className="flex items-center gap-2 text-accent-magenta font-mono text-sm uppercase tracking-widest group">
               Explore Tech <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
@@ -119,10 +119,10 @@ export default function Home() {
           {/* Small Card 1 */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="md:col-span-4 bento-card p-8 flex flex-col justify-between bg-accent-cyan/5 border-accent-cyan/20"
+            className="md:col-span-4 bento-card p-8 flex flex-col justify-between bg-accent-magenta/5 border-accent-magenta/20"
           >
             <div>
-              <div className="w-10 h-10 rounded-lg bg-accent-cyan/20 flex items-center justify-center text-accent-cyan mb-6">
+              <div className="w-10 h-10 rounded-lg bg-accent-magenta/20 flex items-center justify-center text-accent-magenta mb-6">
                 <Cpu size={20} />
               </div>
               <h3 className="text-2xl font-display font-bold mb-2">AI Integration</h3>
@@ -173,7 +173,7 @@ export default function Home() {
                 <p className="text-zinc-400 mb-8">
                   Our infrastructure is built to handle millions of users with zero downtime.
                 </p>
-                <Link to="/contact" className="px-6 py-3 bg-accent-cyan text-background rounded-xl font-bold inline-block">
+                <Link to="/contact" className="px-6 py-3 bg-accent-magenta text-background rounded-xl font-bold inline-block">
                   Get Started
                 </Link>
               </div>
