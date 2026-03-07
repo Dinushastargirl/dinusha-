@@ -1,217 +1,211 @@
 import { motion } from "motion/react";
-import { ArrowRight, Sparkles, Code, Rocket, GraduationCap, Calculator, Beaker, TrendingUp, User, Mail, Check, ShoppingCart, Globe, Star } from "lucide-react";
+import { ArrowRight, Sparkles, Code, Rocket, GraduationCap, Calculator, Beaker, TrendingUp, User, Mail, Check, ShoppingCart, Globe, Star, Zap, Cpu, Globe2, Layers } from "lucide-react";
 import { Link } from "react-router-dom";
+import RubiksCube from "../components/RubiksCube";
+import CircularShowcase from "../components/CircularShowcase";
 
 export default function Home() {
   return (
-    <div className="pt-20">
-      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-background">
-        {/* Background Decorative Elements */}
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-accent-cyan/10 rounded-full blur-[150px] animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-accent-magenta/10 rounded-full blur-[150px] animate-pulse delay-1000" />
+    <div className="pt-20 grid-bg min-h-screen">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="text-left z-10">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-cyan text-sm font-mono mb-8"
+            >
+              <Sparkles size={16} />
+              <span>EST. 2024 • GLOBAL TECH STUDIO</span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-7xl md:text-[120px] font-display font-bold tracking-tighter leading-[0.85] mb-8"
+            >
+              BEULEX <br />
+              <span className="text-gradient-magenta">STUDIO</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="max-w-xl text-zinc-400 text-xl md:text-2xl mb-12 leading-tight"
+            >
+              We engineer high-performance digital experiences for the next generation of innovators.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-wrap items-center gap-4"
+            >
+              <Link
+                to="/website-projects"
+                className="group px-8 py-4 bg-white text-background rounded-2xl font-bold text-lg hover:scale-105 transition-all flex items-center gap-2"
+              >
+                View Portfolio
+                <ArrowRight size={20} />
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 glass text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border border-white/10"
+              >
+                Start Project
+              </Link>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="relative h-[400px] md:h-[600px] w-full"
+          >
+            <RubiksCube />
+          </motion.div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        {/* Scroll Indicator */}
+        <motion.div 
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-zinc-500"
+        >
+          <div className="w-[1px] h-12 bg-gradient-to-b from-accent-cyan to-transparent mx-auto" />
+        </motion.div>
+      </section>
+
+      {/* Bento Grid Section */}
+      <section className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="mb-20">
+          <h2 className="text-5xl md:text-8xl font-display font-bold tracking-tighter mb-6">
+            CORE <span className="text-zinc-600">CAPABILITIES</span>
+          </h2>
+          <p className="text-zinc-400 text-xl max-w-2xl">
+            Our expertise spans across the entire digital spectrum, from high-end web engineering to advanced AI integration.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+          {/* Large Card 1 */}
+          <motion.div 
+            whileHover={{ y: -5 }}
+            className="md:col-span-8 bento-card p-10 flex flex-col justify-between min-h-[400px]"
+          >
+            <div className="absolute top-0 right-0 p-10 opacity-10">
+              <Globe2 size={200} />
+            </div>
+            <div>
+              <div className="w-12 h-12 rounded-xl bg-accent-cyan/10 flex items-center justify-center text-accent-cyan mb-6">
+                <Rocket size={24} />
+              </div>
+              <h3 className="text-4xl font-display font-bold mb-4">Web Engineering</h3>
+              <p className="text-zinc-400 text-lg max-w-md">
+                Building lightning-fast, scalable web platforms using the most modern tech stacks available today.
+              </p>
+            </div>
+            <Link to="/services" className="flex items-center gap-2 text-accent-cyan font-mono text-sm uppercase tracking-widest group">
+              Explore Tech <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
+
+          {/* Small Card 1 */}
+          <motion.div 
+            whileHover={{ y: -5 }}
+            className="md:col-span-4 bento-card p-8 flex flex-col justify-between bg-accent-cyan/5 border-accent-cyan/20"
+          >
+            <div>
+              <div className="w-10 h-10 rounded-lg bg-accent-cyan/20 flex items-center justify-center text-accent-cyan mb-6">
+                <Cpu size={20} />
+              </div>
+              <h3 className="text-2xl font-display font-bold mb-2">AI Integration</h3>
+              <p className="text-zinc-500 text-sm">
+                Smart solutions powered by cutting-edge machine learning models.
+              </p>
+            </div>
+            <Link to="/ai-softwares" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+              <ArrowRight size={16} />
+            </Link>
+          </motion.div>
+
+          {/* Small Card 2 */}
+          <motion.div 
+            whileHover={{ y: -5 }}
+            className="md:col-span-4 bento-card p-8 flex flex-col justify-between"
+          >
+            <div>
+              <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white mb-6">
+                <Layers size={20} />
+              </div>
+              <h3 className="text-2xl font-display font-bold mb-2">Creative Digital</h3>
+              <p className="text-zinc-500 text-sm">
+                Interactive experiences that push the boundaries of the browser.
+              </p>
+            </div>
+            <Link to="/creative-projects" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+              <ArrowRight size={16} />
+            </Link>
+          </motion.div>
+
+          {/* Large Card 2 */}
+          <motion.div 
+            whileHover={{ y: -5 }}
+            className="md:col-span-8 bento-card p-10 flex flex-col justify-between min-h-[400px] bg-zinc-900/50"
+          >
+            <div className="grid grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-6xl font-display font-bold mb-2">99%</h3>
+                <p className="text-zinc-500 font-mono text-xs uppercase tracking-tighter">Performance Score</p>
+              </div>
+              <div>
+                <h3 className="text-6xl font-display font-bold mb-2">24/7</h3>
+                <p className="text-zinc-500 font-mono text-xs uppercase tracking-tighter">Global Support</p>
+              </div>
+              <div className="col-span-2">
+                <h4 className="text-2xl font-display font-bold mb-4">Ready to scale?</h4>
+                <p className="text-zinc-400 mb-8">
+                  Our infrastructure is built to handle millions of users with zero downtime.
+                </p>
+                <Link to="/contact" className="px-6 py-3 bg-accent-cyan text-background rounded-xl font-bold inline-block">
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Featured Projects - Circular Showcase */}
+      <CircularShowcase />
+
+      {/* Final CTA - Edge Style */}
+      <section className="py-40 relative overflow-hidden">
+        <div className="absolute inset-0 grid-bg opacity-20" />
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-cyan text-sm font-medium mb-8"
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="mb-12"
           >
-            <Sparkles size={16} />
-            <span>A Global Digital Studio for the Next Generation</span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl md:text-9xl font-display font-bold tracking-tight mb-8 leading-[1.0]"
-          >
-            BEULEX <br />
-            <span className="text-gradient-cyan">DIGITAL</span> STUDIO
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-2xl mx-auto text-zinc-400 text-xl md:text-2xl mb-12 leading-relaxed"
-          >
-            Building the future with code, creativity, and innovation. 
-            A professional global tech company empowering the next generation of innovators.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap items-center justify-center gap-4"
-          >
-            <Link
-              to="/website-projects"
-              className="group px-10 py-5 bg-white text-background rounded-full font-bold text-xl hover:scale-105 transition-all flex items-center gap-2"
-            >
-              Explore Our Work
-              <ArrowRight size={20} />
-            </Link>
-            <Link
-              to="/contact"
-              className="px-10 py-5 glass text-white rounded-full font-bold text-xl hover:bg-white/10 transition-all border border-white/10"
-            >
-              Start Your Project
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Navigation Grid (Minimal CTAs) */}
-      <section className="py-24 bg-surface/30 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "About the Founder", link: "/about", icon: User, color: "text-accent-cyan", desc: "Learn about Dinusha Pushparajah." },
-              { title: "Our Services", link: "/services", icon: Rocket, color: "text-accent-magenta", desc: "Professional digital solutions." },
-              { title: "Packages", link: "/packages", icon: Star, color: "text-accent-cyan", desc: "Transparent pricing & plans." },
-              { title: "Beulex Academy", link: "/beulex-academy", icon: GraduationCap, color: "text-accent-green", desc: "Join our training programs." },
-              { title: "Youth Innovation", link: "/youth-innovation", icon: Sparkles, color: "text-blue-500", desc: "Empowering young creators." },
-              { title: "SLMC²", link: "/slmc2", icon: Calculator, color: "text-yellow-500", desc: "Professional Mathematical Community." },
-              { title: "Innovation Lab", link: "/innovation-lab", icon: Beaker, color: "text-purple-500", desc: "Experimental tech projects." },
-              { title: "Case Studies", link: "/case-studies", icon: TrendingUp, color: "text-orange-500", desc: "Measurable project results." },
-              { title: "Tech Stack", link: "/tech-stack", icon: Code, color: "text-emerald-500", desc: "Our modern technology stack." },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-              >
-                <Link
-                  to={item.link}
-                  className="p-8 h-full rounded-3xl glass border-white/5 hover:border-white/10 transition-all group flex flex-col"
-                >
-                  <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 ${item.color}`}>
-                    <item.icon size={24} />
-                  </div>
-                  <h3 className="text-xl font-display font-bold mb-2 group-hover:text-white transition-colors">{item.title}</h3>
-                  <p className="text-zinc-500 text-sm mb-6 flex-grow">{item.desc}</p>
-                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-zinc-400 group-hover:text-white transition-colors">
-                    Explore <ArrowRight size={14} />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Packages Preview Section */}
-      <section className="py-32 relative overflow-hidden bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-white/10 text-accent-cyan text-xs font-mono mb-6"
-            >
-              <TrendingUp size={14} />
-              <span>PRICING & PACKAGES</span>
-            </motion.div>
-            <h2 className="text-4xl md:text-7xl font-display font-bold mb-6">Choose Your <span className="text-gradient-cyan">Plan</span></h2>
-            <p className="text-zinc-400 text-xl max-w-2xl mx-auto">
-              Professional digital solutions tailored for every stage of your business growth.
+            <h2 className="text-6xl md:text-[140px] font-display font-bold tracking-tighter leading-[0.8] mb-12">
+              LET'S <br />
+              <span className="text-gradient-magenta">BUILD</span>
+            </h2>
+            <p className="text-zinc-400 text-2xl mb-16 max-w-xl mx-auto">
+              Ready to transform your digital presence? We're currently accepting new projects for 2024.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {[
-              { 
-                title: "Starter Website", 
-                price: "45,000", 
-                icon: Rocket, 
-                color: "text-accent-cyan",
-                features: ["5 Professional Pages", "Mobile Responsive", "Contact Form", "Free Domain"]
-              },
-              { 
-                title: "Business Website", 
-                price: "95,000", 
-                icon: Globe, 
-                color: "text-accent-magenta",
-                features: ["10 Custom Pages", "Blog System", "SEO Optimization", "Google Analytics"],
-                popular: true
-              },
-              { 
-                title: "E-Commerce Website", 
-                price: "220,000", 
-                icon: ShoppingCart, 
-                color: "text-accent-green",
-                features: ["Online Store", "Payment Gateway", "Product Management", "Order Dashboard"]
-              }
-            ].map((pkg, index) => (
-              <motion.div
-                key={pkg.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className={`p-10 rounded-[40px] glass border ${pkg.popular ? 'border-accent-cyan/30 scale-105 z-10' : 'border-white/5'} flex flex-col h-full`}
-              >
-                <div className={`w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 ${pkg.color}`}>
-                  <pkg.icon size={28} />
-                </div>
-                <h3 className="text-2xl font-display font-bold mb-2">{pkg.title}</h3>
-                <div className="mb-8">
-                  <div className="text-zinc-500 text-xs font-mono uppercase tracking-widest mb-1">Starting from</div>
-                  <div className="text-3xl font-display font-bold text-white">Rs {pkg.price}</div>
-                </div>
-                <div className="space-y-4 flex-grow mb-10">
-                  {pkg.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-3 text-sm text-zinc-400">
-                      <Check size={16} className={`${pkg.color} shrink-0`} />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                <Link
-                  to="/packages"
-                  className={`w-full py-4 rounded-full font-bold text-center transition-all ${
-                    pkg.popular 
-                      ? 'bg-accent-cyan text-background hover:scale-105' 
-                      : 'glass text-white hover:bg-white/10 border border-white/10'
-                  }`}
-                >
-                  View Details
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link to="/packages" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group">
-              View all packages and add-ons <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            <Link to="/contact" className="inline-flex items-center gap-4 px-12 py-6 bg-white text-background rounded-[32px] font-bold text-2xl hover:scale-105 transition-all">
+              Start a Conversation <ArrowRight size={28} />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-display font-bold mb-8">Ready to build the future?</h2>
-          <p className="text-zinc-400 text-xl mb-12">
-            Whether you have a startup idea or want to join our academy, we're here to help you innovate.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/contact" className="px-10 py-5 bg-white text-background rounded-full font-bold text-lg hover:scale-105 transition-all">
-              Contact Us
-            </Link>
-            <Link to="/beulex-academy" className="px-10 py-5 glass text-white rounded-full font-bold text-lg hover:bg-white/10 transition-all border border-white/10">
-              Join the Academy
-            </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

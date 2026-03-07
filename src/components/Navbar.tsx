@@ -13,6 +13,7 @@ interface NavItem {
 const navLinks: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
+  { name: "Process", href: "/process" },
   {
     name: "Services",
     dropdown: [
@@ -81,12 +82,12 @@ export default function Navbar() {
               initial={{ rotate: 0 }}
               whileHover={{ rotate: 180 }}
               transition={{ duration: 0.5 }}
-              className="w-10 h-10 bg-accent-cyan rounded-lg flex items-center justify-center neon-glow-cyan"
+              className="w-10 h-10 bg-accent-magenta rounded-lg flex items-center justify-center neon-glow-magenta"
             >
               <Code2 className="text-background" size={24} />
             </motion.div>
             <span className="text-xl font-display font-bold tracking-tight">
-              BEULEX<span className="text-accent-cyan">.</span>
+              BEULEX<span className="text-accent-magenta">.</span>
             </span>
           </Link>
 
@@ -105,7 +106,7 @@ export default function Navbar() {
                       to={link.href}
                       className={`px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium ${
                         location.pathname === link.href
-                          ? "text-accent-cyan bg-white/5"
+                          ? "text-accent-magenta bg-white/5"
                           : "text-zinc-400 hover:text-white hover:bg-white/5"
                       }`}
                     >
@@ -143,7 +144,7 @@ export default function Navbar() {
                                   to={subItem.href}
                                   className="block p-3 rounded-xl hover:bg-white/5 transition-colors group"
                                 >
-                                  <div className="text-sm font-bold text-white group-hover:text-accent-cyan transition-colors">
+                                  <div className="text-sm font-bold text-white group-hover:text-accent-magenta transition-colors">
                                     {subItem.name}
                                   </div>
                                   {subItem.desc && <div className="text-xs text-zinc-500 mt-0.5">{subItem.desc}</div>}
@@ -158,7 +159,7 @@ export default function Navbar() {
                                   href={`tel:${link.contactInfo.phone}`}
                                   className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors group"
                                 >
-                                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-accent-cyan/20 group-hover:text-accent-cyan transition-all">
+                                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-accent-magenta/20 group-hover:text-accent-magenta transition-all">
                                     <Phone size={14} />
                                   </div>
                                   <span className="text-sm font-medium">{link.contactInfo.phone}</span>
@@ -167,7 +168,7 @@ export default function Navbar() {
                                   href={`mailto:${link.contactInfo.email}`}
                                   className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors group"
                                 >
-                                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-accent-cyan/20 group-hover:text-accent-cyan transition-all">
+                                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-accent-magenta/20 group-hover:text-accent-magenta transition-all">
                                     <Mail size={14} />
                                   </div>
                                   <span className="text-sm font-medium truncate">{link.contactInfo.email}</span>
@@ -175,7 +176,7 @@ export default function Navbar() {
                               </div>
                               <Link
                                 to="/contact"
-                                className="flex items-center justify-center gap-2 w-full py-2.5 bg-accent-cyan text-background rounded-xl text-sm font-bold hover:scale-[1.02] transition-all"
+                                className="flex items-center justify-center gap-2 w-full py-2.5 bg-accent-magenta text-background rounded-xl text-sm font-bold hover:scale-[1.02] transition-all"
                               >
                                 <MessageSquare size={14} />
                                 Contact Page
@@ -191,7 +192,7 @@ export default function Navbar() {
               <div className="pl-4">
                 <Link
                   to="/contact"
-                  className="bg-white text-background px-6 py-2.5 rounded-full text-sm font-bold hover:bg-accent-cyan transition-all duration-300 shadow-lg shadow-white/5"
+                  className="bg-white text-background px-6 py-2.5 rounded-full text-sm font-bold hover:bg-accent-magenta transition-all duration-300 shadow-lg shadow-white/5"
                 >
                   Start a Project
                 </Link>
@@ -228,7 +229,7 @@ export default function Navbar() {
                       to={link.href}
                       onClick={() => setIsOpen(false)}
                       className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                        location.pathname === link.href ? "text-accent-cyan bg-white/5" : "text-zinc-400 hover:text-white hover:bg-white/5"
+                        location.pathname === link.href ? "text-accent-magenta bg-white/5" : "text-zinc-400 hover:text-white hover:bg-white/5"
                       }`}
                     >
                       {link.name}
@@ -261,7 +262,7 @@ export default function Navbar() {
                                   key={subItem.name}
                                   to={subItem.href}
                                   onClick={() => setIsOpen(false)}
-                                  className="block px-4 py-2 text-sm text-zinc-500 hover:text-accent-cyan transition-colors"
+                                  className="block px-4 py-2 text-sm text-zinc-500 hover:text-accent-magenta transition-colors"
                                 >
                                   {subItem.name}
                                 </Link>
@@ -270,18 +271,18 @@ export default function Navbar() {
                                 <div className="px-4 py-4 space-y-4 bg-white/5 rounded-2xl mt-2">
                                   <div className="space-y-3">
                                     <a href={`tel:${link.contactInfo.phone}`} className="flex items-center gap-3 text-zinc-400">
-                                      <Phone size={14} className="text-accent-cyan" />
+                                      <Phone size={14} className="text-accent-magenta" />
                                       <span className="text-sm">{link.contactInfo.phone}</span>
                                     </a>
                                     <a href={`mailto:${link.contactInfo.email}`} className="flex items-center gap-3 text-zinc-400">
-                                      <Mail size={14} className="text-accent-cyan" />
+                                      <Mail size={14} className="text-accent-magenta" />
                                       <span className="text-sm truncate">{link.contactInfo.email}</span>
                                     </a>
                                   </div>
                                   <Link
                                     to="/contact"
                                     onClick={() => setIsOpen(false)}
-                                    className="block w-full text-center py-2.5 bg-accent-cyan/10 text-accent-cyan rounded-xl text-sm font-bold"
+                                    className="block w-full text-center py-2.5 bg-accent-magenta/10 text-accent-magenta rounded-xl text-sm font-bold"
                                   >
                                     Go to Contact Page
                                   </Link>

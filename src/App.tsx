@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
+import Lenis from "lenis";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Process from "./pages/Process";
 import Services from "./pages/Services";
 import WebsiteProjects from "./pages/WebsiteProjects";
 import CreativeProjects from "./pages/CreativeProjects";
@@ -37,13 +39,37 @@ function AppContent() {
     restDelta: 0.001
   });
 
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
-    <div className="bg-background min-h-screen selection:bg-accent-cyan/30 selection:text-accent-cyan">
+    <div className="bg-background min-h-screen selection:bg-accent-magenta/30 selection:text-accent-magenta">
       <ScrollToTop />
       
       {/* Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-cyan via-accent-magenta to-accent-green z-[60] origin-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-magenta via-pink-500 to-accent-green z-[60] origin-left"
         style={{ scaleX }}
       />
 
@@ -53,6 +79,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/process" element={<Process />} />
           <Route path="/services" element={<Services />} />
           <Route path="/website-projects" element={<WebsiteProjects />} />
           <Route path="/creative-projects" element={<CreativeProjects />} />

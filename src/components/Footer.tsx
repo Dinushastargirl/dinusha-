@@ -1,64 +1,99 @@
 import { motion } from "motion/react";
-import { Github, Linkedin, Twitter, Globe, Code2 } from "lucide-react";
+import { Github, Linkedin, Twitter, Globe, Code2, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="pt-24 border-t border-white/5 bg-background">
+    <footer className="pt-40 border-t border-white/5 bg-background grid-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-accent-cyan rounded-lg flex items-center justify-center neon-glow-cyan">
-                <Code2 className="text-background" size={24} />
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-32">
+          <div className="md:col-span-6">
+            <Link to="/" className="flex items-center gap-2 mb-8 group">
+              <div className="w-12 h-12 bg-accent-cyan rounded-xl flex items-center justify-center neon-glow-cyan transition-transform group-hover:rotate-12">
+                <Code2 className="text-background" size={28} />
               </div>
-              <span className="text-2xl font-display font-bold tracking-tight">
+              <span className="text-3xl font-display font-bold tracking-tighter">
                 BEULEX<span className="text-accent-cyan">.</span>
               </span>
-            </div>
-            <p className="text-zinc-400 text-lg max-w-sm leading-relaxed mb-8">
-              Building the future with code, creativity, and innovation. A modern global digital studio 
-              empowering the next generation.
+            </Link>
+            <p className="text-zinc-400 text-2xl max-w-md font-display font-medium leading-tight mb-12">
+              Engineering high-performance digital experiences for the next generation.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-zinc-400 hover:text-accent-cyan hover:border-accent-cyan/30 transition-all">
-                <Github size={20} />
-              </a>
-              <a href="#" className="w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-zinc-400 hover:text-accent-magenta hover:border-accent-magenta/30 transition-all">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-zinc-400 hover:text-accent-green hover:border-accent-green/30 transition-all">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-zinc-400 hover:text-blue-500 hover:border-blue-500/30 transition-all">
-                <Globe size={20} />
-              </a>
+              {[
+                { icon: Github, href: "#", color: "hover:text-accent-cyan" },
+                { icon: Linkedin, href: "#", color: "hover:text-accent-magenta" },
+                { icon: Twitter, href: "#", color: "hover:text-accent-green" },
+                { icon: Globe, href: "#", color: "hover:text-blue-500" }
+              ].map((social, i) => (
+                <a 
+                  key={i}
+                  href={social.href} 
+                  className={`w-14 h-14 rounded-2xl glass border-white/10 flex items-center justify-center text-zinc-500 ${social.color} hover:border-white/20 transition-all`}
+                >
+                  <social.icon size={24} />
+                </a>
+              ))}
             </div>
           </div>
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm font-mono">Quick Links</h4>
-            <ul className="space-y-4 text-zinc-400">
-              <li><Link to="/about" className="hover:text-accent-cyan transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="hover:text-accent-cyan transition-colors">Services</Link></li>
-              <li><Link to="/projects" className="hover:text-accent-cyan transition-colors">Projects</Link></li>
-              <li><Link to="/packages" className="hover:text-accent-cyan transition-colors">Packages</Link></li>
-              <li><Link to="/case-studies" className="hover:text-accent-cyan transition-colors">Case Studies</Link></li>
-              <li><Link to="/tech-stack" className="hover:text-accent-cyan transition-colors">Tech Stack</Link></li>
+
+          <div className="md:col-span-3">
+            <h4 className="text-zinc-500 font-mono text-xs uppercase tracking-[0.3em] mb-10">Navigation</h4>
+            <ul className="space-y-6">
+              {[
+                { name: "About Us", href: "/about" },
+                { name: "Process", href: "/process" },
+                { name: "Services", href: "/services" },
+                { name: "Portfolio", href: "/website-projects" },
+                { name: "Packages", href: "/packages" },
+                { name: "Case Studies", href: "/case-studies" },
+                { name: "Tech Stack", href: "/tech-stack" }
+              ].map(link => (
+                <li key={link.name}>
+                  <Link to={link.href} className="text-xl font-display font-bold text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group">
+                    {link.name} <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm font-mono">Programs</h4>
-            <ul className="space-y-4 text-zinc-400">
-              <li><Link to="/beulex-academy" className="hover:text-accent-cyan transition-colors">Academy</Link></li>
-              <li><Link to="/youth-innovation" className="hover:text-accent-cyan transition-colors">Youth Innovation</Link></li>
-              <li><Link to="/slmc2" className="hover:text-accent-cyan transition-colors">SLMC²</Link></li>
-              <li><Link to="/innovation-lab" className="hover:text-accent-cyan transition-colors">Innovation Lab</Link></li>
+
+          <div className="md:col-span-3">
+            <h4 className="text-zinc-500 font-mono text-xs uppercase tracking-[0.3em] mb-10">Ecosystem</h4>
+            <ul className="space-y-6">
+              {[
+                { name: "Beulex Academy", href: "/beulex-academy" },
+                { name: "Youth Innovation", href: "/youth-innovation" },
+                { name: "SLMC²", href: "/slmc2" },
+                { name: "Innovation Lab", href: "/innovation-lab" }
+              ].map(link => (
+                <li key={link.name}>
+                  <Link to={link.href} className="text-xl font-display font-bold text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group">
+                    {link.name} <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-        <div className="pb-12 flex flex-col md:flex-row justify-between items-center gap-6 text-zinc-500 text-sm font-mono uppercase tracking-widest">
-          <div>© 2026 BEULEX. All rights reserved.</div>
-          <div>Designed & Developed by <span className="text-white">Dinusha Pushparajah</span></div>
+
+        <div className="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="text-zinc-600 font-mono text-xs uppercase tracking-widest">
+            © 2026 BEULEX. All rights reserved.
+          </div>
+          <button 
+            onClick={scrollToTop}
+            className="group flex items-center gap-4 text-zinc-400 hover:text-white transition-colors font-mono text-xs uppercase tracking-widest"
+          >
+            Back to top <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all"><ArrowUpRight size={16} className="-rotate-45" /></div>
+          </button>
+          <div className="text-zinc-600 font-mono text-xs uppercase tracking-widest">
+            Designed by <span className="text-zinc-400">Dinusha Pushparajah</span>
+          </div>
         </div>
       </div>
     </footer>
