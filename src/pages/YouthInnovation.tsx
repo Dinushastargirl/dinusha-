@@ -12,7 +12,7 @@ export default function YouthInnovation() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-green text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-slate-200 text-accent-green text-sm font-medium mb-8"
           >
             <GraduationCap size={16} />
             <span>Empowering the Next Generation</span>
@@ -29,7 +29,7 @@ export default function YouthInnovation() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed"
           >
             BEULEX is committed to empowering young people across the nation by 
             providing training, inspiration, and the tools they need to become future tech leaders.
@@ -43,7 +43,7 @@ export default function YouthInnovation() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-display font-bold mb-8 leading-tight">Our Mission to <br />Build Future Innovators</h2>
-            <div className="space-y-6 text-zinc-400 text-lg leading-relaxed">
+            <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
               <p>
                 We believe that the future of technology lies in the hands of the youth. Our initiative 
                 focuses on bridging the gap between traditional education and the rapidly evolving 
@@ -62,9 +62,9 @@ export default function YouthInnovation() {
                 "Startup Entrepreneurship",
                 "Problem Solving Mindset",
               ].map((skill) => (
-                <div key={skill} className="flex items-center gap-3 p-4 rounded-2xl glass border-white/5">
+                <div key={skill} className="flex items-center gap-3 p-4 rounded-2xl glass border-slate-100">
                   <CheckCircle2 className="text-accent-green" size={20} />
-                  <span className="text-white font-medium">{skill}</span>
+                  <span className="text-slate-900 font-medium">{skill}</span>
                 </div>
               ))}
             </div>
@@ -75,7 +75,7 @@ export default function YouthInnovation() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square rounded-[40px] overflow-hidden glass border-white/10 p-2">
+            <div className="aspect-square rounded-[40px] overflow-hidden glass border-slate-200 p-2">
               <img
                 src="https://picsum.photos/seed/youth/1000/1000"
                 alt="Youth Innovation"
@@ -85,7 +85,7 @@ export default function YouthInnovation() {
             </div>
             <div className="absolute -bottom-6 -right-6 p-8 glass rounded-3xl border-accent-green/20 neon-glow-green">
               <div className="text-4xl font-bold text-accent-green mb-1">500+</div>
-              <div className="text-xs font-mono text-zinc-400 uppercase tracking-widest">Students Trained</div>
+              <div className="text-xs font-mono text-slate-600 uppercase tracking-widest">Students Trained</div>
             </div>
           </motion.div>
         </div>
@@ -117,13 +117,13 @@ export default function YouthInnovation() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-[40px] glass border-white/5 text-center group hover:border-white/10 transition-all"
+              className="p-10 rounded-[40px] glass border-slate-100 text-center group hover:border-slate-200 transition-all"
             >
-              <div className={`w-20 h-20 rounded-2xl bg-white/5 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform ${item.color}`}>
+              <div className={`w-20 h-20 rounded-2xl bg-slate-50 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform ${item.color}`}>
                 <item.icon size={40} />
               </div>
               <h3 className="text-2xl font-display font-bold mb-4">{item.title}</h3>
-              <p className="text-zinc-400 text-lg leading-relaxed">{item.desc}</p>
+              <p className="text-slate-600 text-lg leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>

@@ -8,7 +8,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="pt-40 border-t border-white/5 bg-background grid-bg">
+    <footer className="pt-40 border-t border-slate-100 bg-background grid-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-32">
           <div className="md:col-span-6">
@@ -23,7 +23,7 @@ export default function Footer() {
                 BEULEX<span className="text-accent-magenta">.</span>
               </span>
             </Link>
-            <p className="text-zinc-400 text-2xl max-w-md font-display font-medium leading-tight mb-12">
+            <p className="text-slate-600 text-2xl max-w-md font-display font-medium leading-tight mb-12">
               Creating a revolution to revaluate people's lives.
             </p>
             <div className="flex gap-4">
@@ -36,7 +36,7 @@ export default function Footer() {
                 <a 
                   key={i}
                   href={social.href} 
-                  className={`w-14 h-14 rounded-2xl glass border-white/10 flex items-center justify-center text-zinc-500 ${social.color} hover:border-white/20 transition-all`}
+                  className={`w-14 h-14 rounded-2xl glass border-slate-200 flex items-center justify-center text-slate-500 ${social.color} hover:border-white/20 transition-all`}
                 >
                   <social.icon size={24} />
                 </a>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="text-zinc-500 font-mono text-xs uppercase tracking-[0.3em] mb-10">Navigation</h4>
+            <h4 className="text-slate-500 font-mono text-xs uppercase tracking-[0.3em] mb-10">Navigation</h4>
             <ul className="space-y-6">
               {[
                 { name: "About Us", href: "/about" },
@@ -57,7 +57,7 @@ export default function Footer() {
                 { name: "Tech Stack", href: "/tech-stack" }
               ].map(link => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-xl font-display font-bold text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group">
+                  <Link to={link.href} className="text-xl font-display font-bold text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 group">
                     {link.name} <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
                 </li>
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="text-zinc-500 font-mono text-xs uppercase tracking-[0.3em] mb-10">Ecosystem</h4>
+            <h4 className="text-slate-500 font-mono text-xs uppercase tracking-[0.3em] mb-10">Ecosystem</h4>
             <ul className="space-y-6">
               {[
                 { name: "Beulex Academy", href: "/beulex-academy" },
@@ -75,7 +75,7 @@ export default function Footer() {
                 { name: "Innovation Lab", href: "/innovation-lab" }
               ].map(link => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-xl font-display font-bold text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group">
+                  <Link to={link.href} className="text-xl font-display font-bold text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 group">
                     {link.name} <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
                 </li>
@@ -84,18 +84,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="py-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-zinc-600 font-mono text-xs uppercase tracking-widest">
             © 2026 BEULEX. All rights reserved.
           </div>
           <button 
             onClick={scrollToTop}
-            className="group flex items-center gap-4 text-zinc-400 hover:text-white transition-colors font-mono text-xs uppercase tracking-widest"
+            className="group flex items-center gap-4 text-slate-600 hover:text-slate-900 transition-colors font-mono text-xs uppercase tracking-widest"
           >
-            Back to top <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all"><ArrowUpRight size={16} className="-rotate-45" /></div>
+            Back to top <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all"><ArrowUpRight size={16} className="-rotate-45" /></div>
           </button>
           <div className="text-zinc-600 font-mono text-xs uppercase tracking-widest">
-            Designed by <span className="text-zinc-400">Dinusha Pushparajah</span>
+            Designed by <span className="text-slate-600">Dinusha Pushparajah</span>
           </div>
         </div>
       </div>

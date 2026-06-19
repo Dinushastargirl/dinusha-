@@ -13,7 +13,7 @@ export default function BeulexAcademy() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-green text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-slate-200 text-accent-green text-sm font-medium mb-8"
           >
             <GraduationCap size={16} />
             <span>Structured Learning & Mentorship</span>
@@ -29,7 +29,7 @@ export default function BeulexAcademy() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed"
           >
             Empowering the next generation of innovators through structured training, 
             hands-on workshops, and direct mentorship from industry experts.
@@ -67,14 +67,14 @@ export default function BeulexAcademy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-[40px] glass border-white/5 hover:border-white/10 transition-all group"
+              className="p-10 rounded-[40px] glass border-slate-100 hover:border-slate-200 transition-all group"
             >
               <div className={`w-16 h-16 rounded-2xl ${program.bg} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform ${program.color}`}>
                 <program.icon size={32} />
               </div>
               <h3 className="text-2xl font-display font-bold mb-4">{program.title}</h3>
-              <p className="text-zinc-400 leading-relaxed mb-8">{program.desc}</p>
-              <Link to="/contact" className="inline-flex items-center gap-2 text-white font-bold group-hover:text-accent-green transition-colors">
+              <p className="text-slate-600 leading-relaxed mb-8">{program.desc}</p>
+              <Link to="/contact" className="inline-flex items-center gap-2 text-slate-900 font-bold group-hover:text-accent-green transition-colors">
                 Apply for Program
                 <ArrowRight size={18} />
               </Link>
@@ -90,7 +90,7 @@ export default function BeulexAcademy() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-display font-bold mb-8 leading-tight">Direct Mentorship <br />from Industry Experts</h2>
-            <div className="space-y-6 text-zinc-400 text-lg leading-relaxed">
+            <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
               <p>
                 At Beulex Academy, we believe that learning is most effective when guided by those 
                 who have already walked the path. Our mentorship program connects students with 
@@ -108,9 +108,9 @@ export default function BeulexAcademy() {
                 { icon: Brain, text: "Strategic Guidance" },
                 { icon: Lightbulb, text: "Creative Brainstorming" },
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 p-4 rounded-2xl glass border-white/5">
+                <div key={i} className="flex items-center gap-3 p-4 rounded-2xl glass border-slate-100">
                   <item.icon className="text-accent-green" size={20} />
-                  <span className="text-white font-medium">{item.text}</span>
+                  <span className="text-slate-900 font-medium">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -121,7 +121,7 @@ export default function BeulexAcademy() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square rounded-[40px] overflow-hidden glass border-white/10 p-2">
+            <div className="aspect-square rounded-[40px] overflow-hidden glass border-slate-200 p-2">
               <img
                 src="https://picsum.photos/seed/academy/1000/1000"
                 alt="Beulex Academy Mentorship"
@@ -131,17 +131,17 @@ export default function BeulexAcademy() {
             </div>
             <div className="absolute -bottom-6 -right-6 p-8 glass rounded-3xl border-accent-green/20 neon-glow-green">
               <div className="text-4xl font-bold text-accent-green mb-1">100+</div>
-              <div className="text-xs font-mono text-zinc-400 uppercase tracking-widest">Active Mentors</div>
+              <div className="text-xs font-mono text-slate-600 uppercase tracking-widest">Active Mentors</div>
             </div>
           </motion.div>
         </div>
 
         {/* Workshops */}
-        <div className="p-16 rounded-[40px] glass border-white/10 relative overflow-hidden">
+        <div className="p-16 rounded-[40px] glass border-slate-200 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-accent-green/10 to-transparent pointer-events-none" />
           <div className="text-center mb-16">
             <h2 className="text-4xl font-display font-bold mb-4">Upcoming Workshops</h2>
-            <p className="text-zinc-400">Join our hands-on sessions to master specific skills in a collaborative environment.</p>
+            <p className="text-slate-600">Join our hands-on sessions to master specific skills in a collaborative environment.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
@@ -150,13 +150,13 @@ export default function BeulexAcademy() {
               { title: "Building Scalable APIs", date: "April 20, 2026", type: "Backend" },
               { title: "Growth Hacking 101", date: "May 10, 2026", type: "Business" },
             ].map((workshop, i) => (
-              <div key={i} className="p-8 rounded-3xl glass border-white/5 flex items-center justify-between group hover:bg-white/5 transition-all">
+              <div key={i} className="p-8 rounded-3xl glass border-slate-100 flex items-center justify-between group hover:bg-slate-50 transition-all">
                 <div>
                   <div className="text-accent-green text-xs font-mono uppercase tracking-widest mb-2">{workshop.type}</div>
                   <h4 className="text-xl font-display font-bold mb-1">{workshop.title}</h4>
-                  <div className="text-zinc-500 text-sm">{workshop.date}</div>
+                  <div className="text-slate-500 text-sm">{workshop.date}</div>
                 </div>
-                <button className="w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-white group-hover:bg-accent-green group-hover:text-background transition-all">
+                <button className="w-12 h-12 rounded-full glass border-slate-200 flex items-center justify-center text-slate-900 group-hover:bg-accent-green group-hover:text-background transition-all">
                   <ArrowRight size={20} />
                 </button>
               </div>

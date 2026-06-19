@@ -12,7 +12,7 @@ export default function SLMC2() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-magenta text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-slate-200 text-accent-magenta text-sm font-medium mb-8"
           >
             <Calculator size={16} />
             <span>Founded by Dinusha Pushparajah</span>
@@ -29,7 +29,7 @@ export default function SLMC2() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed mb-10"
+            className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed mb-10"
           >
             A professional community for individuals who believe mathematics is more than calculation — it is a way of thinking.
           </motion.p>
@@ -57,7 +57,7 @@ export default function SLMC2() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-display font-bold mb-8 leading-tight">Our Focus & <br />Philosophy</h2>
-            <div className="space-y-6 text-zinc-400 text-lg leading-relaxed">
+            <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
               <p>
                 We bring together professionals, academics, engineers, analysts, researchers, and lifelong learners who share a passion for mathematical reasoning, problem-solving, and intellectual growth.
               </p>
@@ -74,9 +74,9 @@ export default function SLMC2() {
                 "Computational Maths",
                 "Structured Problem Sessions",
               ].map((point) => (
-                <div key={point} className="flex items-center gap-3 p-4 rounded-2xl glass border-white/5">
+                <div key={point} className="flex items-center gap-3 p-4 rounded-2xl glass border-slate-100">
                   <CheckCircle2 className="text-accent-magenta" size={20} />
-                  <span className="text-white font-medium">{point}</span>
+                  <span className="text-slate-900 font-medium">{point}</span>
                 </div>
               ))}
             </div>
@@ -87,7 +87,7 @@ export default function SLMC2() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square rounded-[40px] overflow-hidden glass border-white/10 p-2 flex items-center justify-center bg-white/5">
+            <div className="aspect-square rounded-[40px] overflow-hidden glass border-slate-200 p-2 flex items-center justify-center bg-slate-50">
               <img
                 src="https://i.postimg.cc/z3F2jPLv/smlc2-logo.png"
                 alt="SLMC2 Logo"
@@ -100,7 +100,7 @@ export default function SLMC2() {
             </div>
             <div className="absolute -top-6 -right-6 p-8 glass rounded-3xl border-accent-magenta/20 neon-glow-magenta">
               <div className="text-4xl font-bold text-accent-magenta mb-1">SLMC²</div>
-              <div className="text-xs font-mono text-zinc-400 uppercase tracking-widest">Mathematical Culture</div>
+              <div className="text-xs font-mono text-slate-600 uppercase tracking-widest">Mathematical Culture</div>
             </div>
           </motion.div>
         </div>
@@ -132,13 +132,13 @@ export default function SLMC2() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-[40px] glass border-white/5 text-center group hover:border-white/10 transition-all"
+              className="p-10 rounded-[40px] glass border-slate-100 text-center group hover:border-slate-200 transition-all"
             >
-              <div className={`w-20 h-20 rounded-2xl bg-white/5 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform ${item.color}`}>
+              <div className={`w-20 h-20 rounded-2xl bg-slate-50 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform ${item.color}`}>
                 <item.icon size={40} />
               </div>
               <h3 className="text-2xl font-display font-bold mb-4">{item.title}</h3>
-              <p className="text-zinc-400 text-lg leading-relaxed">{item.desc}</p>
+              <p className="text-slate-600 text-lg leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -152,7 +152,7 @@ export default function SLMC2() {
         >
           <div className="absolute top-0 left-0 w-full h-full bg-accent-magenta/5 pointer-events-none" />
           <h2 className="text-4xl font-display font-bold mb-6 relative z-10">Join the Circle</h2>
-          <p className="text-zinc-400 text-xl max-w-2xl mx-auto mb-10 relative z-10">
+          <p className="text-slate-600 text-xl max-w-2xl mx-auto mb-10 relative z-10">
             Connect with like-minded professionals and academics. Let's cultivate a strong mathematical culture together.
           </p>
           <a

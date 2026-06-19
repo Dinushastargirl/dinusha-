@@ -48,7 +48,7 @@ export default function TechStack() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-zinc-400 text-lg max-w-2xl mx-auto"
+            className="text-slate-600 text-lg max-w-2xl mx-auto"
           >
             We leverage the most modern and reliable technologies to build scalable, 
             high-performance digital products.
@@ -63,7 +63,7 @@ export default function TechStack() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-[40px] glass border-white/5 hover:border-white/10 transition-all duration-300"
+              className="p-10 rounded-[40px] glass border-slate-100 hover:border-slate-200 transition-all duration-300"
             >
               <div className="flex items-center gap-6 mb-10">
                 <div className={`w-16 h-16 rounded-2xl ${item.bg} flex items-center justify-center ${item.color}`}>
@@ -73,7 +73,7 @@ export default function TechStack() {
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {item.skills.map((skill) => (
-                  <div key={skill} className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium">
+                  <div key={skill} className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 text-zinc-300 text-sm font-medium">
                     <div className={`w-2 h-2 rounded-full ${item.color.replace('text-', 'bg-')}`} />
                     {skill}
                   </div>
@@ -84,10 +84,10 @@ export default function TechStack() {
         </div>
 
         {/* Philosophy Section */}
-        <div className="mt-32 p-12 rounded-[40px] glass border-white/10 text-center">
+        <div className="mt-32 p-12 rounded-[40px] glass border-slate-200 text-center">
           <TerminalSquare className="text-accent-magenta mx-auto mb-8" size={48} />
           <h2 className="text-3xl font-display font-bold mb-6 tracking-tight">Our Technology Philosophy</h2>
-          <p className="text-zinc-400 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
             We don't just follow trends; we choose technologies that offer the best balance of performance, 
             scalability, and developer experience. Our stack is designed to be future-proof and resilient, 
             ensuring your digital product stays ahead of the curve.

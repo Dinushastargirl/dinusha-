@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -5,12 +6,12 @@
   --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
-  --color-background: #050505;
-  --color-surface: #0A0A0A;
-  --color-accent-cyan: #00F5FF;
-  --color-accent-magenta: #FF00FF;
-  --color-accent-green: #00FF00;
-  --color-border: rgba(255, 255, 255, 0.08);
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  --color-accent-cyan: #0ea5e9;
+  --color-accent-magenta: #0f172a; /* Used for dark navy accents */
+  --color-accent-green: #10b981;
+  --color-border: rgba(15, 23, 42, 0.1);
 }
 
 @layer base {
@@ -35,17 +36,17 @@
   }
 
   body {
-    @apply bg-background text-white font-sans antialiased selection:bg-accent-magenta/30 selection:text-accent-magenta overflow-x-hidden;
+    @apply bg-background text-slate-900 font-sans antialiased selection:bg-slate-200 selection:text-slate-900 overflow-x-hidden;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight font-bold;
+    @apply font-display tracking-tight font-bold text-slate-900;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+    @apply bg-white/80 backdrop-blur-xl border border-slate-200 shadow-sm;
   }
 
   .bento-grid {
@@ -55,31 +56,29 @@
   }
 
   .bento-card {
-    @apply bg-surface border border-white/5 rounded-3xl overflow-hidden relative transition-all duration-500 hover:border-white/15;
+    @apply bg-white border border-slate-200 rounded-3xl overflow-hidden relative transition-all duration-500 hover:border-slate-300 hover:shadow-lg;
   }
 
   .grid-bg {
     background-image: 
-      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
     background-size: 4rem 4rem;
   }
   
   .neon-glow-cyan {
-    box-shadow: 0 0 40px rgba(0, 245, 255, 0.15);
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.15);
   }
   
   .neon-glow-magenta {
-    box-shadow: 0 0 40px rgba(255, 0, 255, 0.15);
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08); /* Soft shadow for navy */
   }
   
   .text-gradient-cyan {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan via-blue-400 to-cyan-300;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500;
   }
 
   .text-gradient-magenta {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-magenta via-pink-500 to-rose-400;
+    @apply text-slate-900; /* Revert to solid navy text */
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');

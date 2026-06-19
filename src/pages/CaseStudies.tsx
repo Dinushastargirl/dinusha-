@@ -19,7 +19,7 @@ export default function CaseStudies() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-magenta text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-slate-200 text-accent-magenta text-sm font-medium mb-8"
           >
             <TrendingUp size={16} />
             <span>Measurable Results</span>
@@ -35,7 +35,7 @@ export default function CaseStudies() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed"
           >
             A deep dive into our most successful projects, showcasing the challenges we faced, 
             the solutions we implemented, and the measurable results we achieved.
@@ -53,7 +53,7 @@ export default function CaseStudies() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
             >
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <div className="aspect-[16/10] rounded-[40px] overflow-hidden glass border-white/10 p-2 mb-8">
+                <div className="aspect-[16/10] rounded-[40px] overflow-hidden glass border-slate-200 p-2 mb-8">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -63,9 +63,9 @@ export default function CaseStudies() {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   {project.caseStudy?.metrics.map((metric, i) => (
-                    <div key={i} className="p-6 rounded-3xl glass border-white/5 text-center">
+                    <div key={i} className="p-6 rounded-3xl glass border-slate-100 text-center">
                       <div className="text-3xl font-display font-bold text-accent-magenta mb-1">{metric.value}</div>
-                      <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest">{metric.label}</div>
+                      <div className="text-xs font-mono text-slate-500 uppercase tracking-widest">{metric.label}</div>
                     </div>
                   ))}
                 </div>
@@ -86,7 +86,7 @@ export default function CaseStudies() {
                       <Zap className="text-accent-magenta" size={20} />
                       The Challenge
                     </h3>
-                    <p className="text-zinc-400 text-lg leading-relaxed">
+                    <p className="text-slate-600 text-lg leading-relaxed">
                       {project.caseStudy?.challenge}
                     </p>
                   </section>
@@ -96,7 +96,7 @@ export default function CaseStudies() {
                       <CheckCircle2 className="text-accent-green" size={20} />
                       The Solution
                     </h3>
-                    <p className="text-zinc-400 text-lg leading-relaxed">
+                    <p className="text-slate-600 text-lg leading-relaxed">
                       {project.caseStudy?.solution}
                     </p>
                   </section>
@@ -106,7 +106,7 @@ export default function CaseStudies() {
                       <TrendingUp className="text-accent-magenta" size={20} />
                       The Result
                     </h3>
-                    <p className="text-zinc-400 text-lg leading-relaxed">
+                    <p className="text-slate-600 text-lg leading-relaxed">
                       {project.caseStudy?.result}
                     </p>
                   </section>
@@ -125,10 +125,10 @@ export default function CaseStudies() {
         </div>
 
         {/* CTA */}
-        <div className="mt-32 p-16 rounded-[40px] glass border-white/10 text-center relative overflow-hidden">
+        <div className="mt-32 p-16 rounded-[40px] glass border-slate-200 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-accent-magenta/10 to-transparent pointer-events-none" />
           <h2 className="text-4xl font-display font-bold mb-6 relative z-10">Ready to achieve similar results?</h2>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto mb-10 relative z-10">
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-10 relative z-10">
             Let's discuss how we can apply our expertise to solve your business challenges and 
             deliver measurable impact.
           </p>

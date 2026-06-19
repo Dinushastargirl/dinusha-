@@ -36,14 +36,14 @@ export default function About() {
           >
             <div>
               <h2 className="text-4xl font-display font-bold mb-6">Our Mission</h2>
-              <p className="text-zinc-400 text-xl leading-tight max-w-xl">
+              <p className="text-slate-600 text-xl leading-tight max-w-xl">
                 The mission of Beulex is to help 1000 small businesses to scale up their business online.
               </p>
             </div>
             <div className="flex gap-4">
-              <div className="px-4 py-2 rounded-full glass border-white/5 text-xs font-mono uppercase tracking-widest text-zinc-500">Innovation</div>
-              <div className="px-4 py-2 rounded-full glass border-white/5 text-xs font-mono uppercase tracking-widest text-zinc-500">Creativity</div>
-              <div className="px-4 py-2 rounded-full glass border-white/5 text-xs font-mono uppercase tracking-widest text-zinc-500">Performance</div>
+              <div className="px-4 py-2 rounded-full glass border-slate-100 text-xs font-mono uppercase tracking-widest text-slate-500">Innovation</div>
+              <div className="px-4 py-2 rounded-full glass border-slate-100 text-xs font-mono uppercase tracking-widest text-slate-500">Creativity</div>
+              <div className="px-4 py-2 rounded-full glass border-slate-100 text-xs font-mono uppercase tracking-widest text-slate-500">Performance</div>
             </div>
           </motion.div>
 
@@ -60,11 +60,11 @@ export default function About() {
                 <Target size={24} />
               </div>
               <h3 className="text-2xl font-display font-bold mb-2">Our Vision</h3>
-              <p className="text-zinc-500 text-sm">
+              <p className="text-slate-500 text-sm">
                 Create a revolution to revaluate people's life.
               </p>
             </div>
-            <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center">
               <Sparkles size={16} className="text-accent-magenta" />
             </div>
           </motion.div>
@@ -98,11 +98,11 @@ export default function About() {
             className="md:col-span-7 bento-card p-10 flex flex-col justify-between"
           >
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-white/10 text-accent-magenta text-xs font-mono mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-slate-200 text-accent-magenta text-xs font-mono mb-6">
                 <User size={14} />
                 <span>MEET THE FOUNDER</span>
               </div>
-              <p className="text-zinc-400 text-lg leading-tight mb-8">
+              <p className="text-slate-600 text-lg leading-tight mb-8">
                 Beulex was founded by Dinusha Pushparajah, a young evolving Entrepreneur. Dinusha is the driving force behind BEULEX and the founder of SLMC².
               </p>
               <div className="space-y-4">
@@ -146,7 +146,7 @@ export default function About() {
               BEYOND <br />
               <span className="text-gradient-magenta">CODE</span>
             </h2>
-            <p className="text-zinc-500 max-w-xs text-right font-mono text-xs uppercase tracking-widest">
+            <p className="text-slate-500 max-w-xs text-right font-mono text-xs uppercase tracking-widest">
               A glimpse into the journey of building impactful digital solutions.
             </p>
           </div>
@@ -175,7 +175,7 @@ export default function About() {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8 text-center">
-                  <p className="text-white font-display font-bold text-xl">Project Milestone {index + 1}</p>
+                  <p className="text-slate-900 font-display font-bold text-xl">Project Milestone {index + 1}</p>
                 </div>
               </motion.div>
             ))}

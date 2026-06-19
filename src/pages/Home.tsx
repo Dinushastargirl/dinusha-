@@ -15,7 +15,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-magenta text-sm font-mono mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-slate-200 text-accent-magenta text-sm font-mono mb-8"
             >
               <Sparkles size={16} />
               <span>EST. 2024 • GLOBAL TECH STUDIO</span>
@@ -35,7 +35,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="max-w-xl text-zinc-400 text-xl md:text-2xl mb-12 leading-tight"
+              className="max-w-xl text-slate-600 text-xl md:text-2xl mb-12 leading-tight"
             >
               On a mission to help 1000 small businesses scale up online and create a revolution to revaluate people's lives.
             </motion.p>
@@ -55,7 +55,7 @@ export default function Home() {
               </Link>
               <Link
                 to="/contact"
-                className="px-8 py-4 glass text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border border-white/10"
+                className="px-8 py-4 glass text-slate-900 rounded-2xl font-bold text-lg hover:bg-slate-100 transition-all border border-slate-200"
               >
                 Start Project
               </Link>
@@ -76,7 +76,7 @@ export default function Home() {
         <motion.div 
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-zinc-500"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-slate-500"
         >
           <div className="w-[1px] h-12 bg-gradient-to-b from-accent-magenta to-transparent mx-auto" />
         </motion.div>
@@ -88,7 +88,7 @@ export default function Home() {
           <h2 className="text-5xl md:text-8xl font-display font-bold tracking-tighter mb-6">
             CORE <span className="text-zinc-600">CAPABILITIES</span>
           </h2>
-          <p className="text-zinc-400 text-xl max-w-2xl">
+          <p className="text-slate-600 text-xl max-w-2xl">
             Our expertise spans across the entire digital spectrum, from high-end web engineering to advanced AI integration.
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function Home() {
                 <Rocket size={24} />
               </div>
               <h3 className="text-4xl font-display font-bold mb-4">Web Engineering</h3>
-              <p className="text-zinc-400 text-lg max-w-md">
+              <p className="text-slate-600 text-lg max-w-md">
                 Building lightning-fast, scalable web platforms using the most modern tech stacks available today.
               </p>
             </div>
@@ -126,11 +126,11 @@ export default function Home() {
                 <Cpu size={20} />
               </div>
               <h3 className="text-2xl font-display font-bold mb-2">AI Integration</h3>
-              <p className="text-zinc-500 text-sm">
+              <p className="text-slate-500 text-sm">
                 Smart solutions powered by cutting-edge machine learning models.
               </p>
             </div>
-            <Link to="/ai-softwares" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+            <Link to="/ai-softwares" className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white hover:text-black transition-all">
               <ArrowRight size={16} />
             </Link>
           </motion.div>
@@ -141,15 +141,15 @@ export default function Home() {
             className="md:col-span-4 bento-card p-8 flex flex-col justify-between"
           >
             <div>
-              <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white mb-6">
+              <div className="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-slate-900 mb-6">
                 <Layers size={20} />
               </div>
               <h3 className="text-2xl font-display font-bold mb-2">Creative Digital</h3>
-              <p className="text-zinc-500 text-sm">
+              <p className="text-slate-500 text-sm">
                 Interactive experiences that push the boundaries of the browser.
               </p>
             </div>
-            <Link to="/creative-projects" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+            <Link to="/creative-projects" className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white hover:text-black transition-all">
               <ArrowRight size={16} />
             </Link>
           </motion.div>
@@ -162,15 +162,15 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-8">
               <div>
                 <h3 className="text-6xl font-display font-bold mb-2">99%</h3>
-                <p className="text-zinc-500 font-mono text-xs uppercase tracking-tighter">Performance Score</p>
+                <p className="text-slate-500 font-mono text-xs uppercase tracking-tighter">Performance Score</p>
               </div>
               <div>
                 <h3 className="text-6xl font-display font-bold mb-2">24/7</h3>
-                <p className="text-zinc-500 font-mono text-xs uppercase tracking-tighter">Global Support</p>
+                <p className="text-slate-500 font-mono text-xs uppercase tracking-tighter">Global Support</p>
               </div>
               <div className="col-span-2">
                 <h4 className="text-2xl font-display font-bold mb-4">Ready to scale?</h4>
-                <p className="text-zinc-400 mb-8">
+                <p className="text-slate-600 mb-8">
                   Our infrastructure is built to handle millions of users with zero downtime.
                 </p>
                 <Link to="/contact" className="px-6 py-3 bg-accent-magenta text-background rounded-xl font-bold inline-block">
@@ -199,7 +199,7 @@ export default function Home() {
               LET'S <br />
               <span className="text-gradient-magenta">BUILD</span>
             </h2>
-            <p className="text-zinc-400 text-2xl mb-16 max-w-xl mx-auto">
+            <p className="text-slate-600 text-2xl mb-16 max-w-xl mx-auto">
               Ready to transform your digital presence? We're currently accepting new projects for 2024.
             </p>
             <Link to="/contact" className="inline-flex items-center gap-4 px-12 py-6 bg-white text-background rounded-[32px] font-bold text-2xl hover:scale-105 transition-all">

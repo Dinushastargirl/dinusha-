@@ -117,7 +117,7 @@ export default function Packages() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-magenta text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-slate-200 text-accent-magenta text-sm font-medium mb-8"
           >
             <Star size={16} />
             <span>Transparent Pricing</span>
@@ -133,7 +133,7 @@ export default function Packages() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed"
           >
             Choose the perfect plan for your business growth. From simple starters to complex 
             enterprise solutions, we deliver excellence at every scale.
@@ -149,7 +149,7 @@ export default function Packages() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`relative p-8 rounded-[40px] glass border ${pkg.popular ? 'border-accent-magenta/40 scale-105 z-20 shadow-2xl shadow-accent-magenta/10' : 'border-white/5'} flex flex-col h-full group hover:border-white/20 transition-all duration-500`}
+              className={`relative p-8 rounded-[40px] glass border ${pkg.popular ? 'border-accent-magenta/40 scale-105 z-20 shadow-2xl shadow-accent-magenta/10' : 'border-slate-100'} flex flex-col h-full group hover:border-white/20 transition-all duration-500`}
             >
               {pkg.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-accent-magenta text-background text-[10px] font-bold uppercase tracking-widest rounded-full">
@@ -157,24 +157,24 @@ export default function Packages() {
                 </div>
               )}
               
-              <div className={`w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 ${pkg.color}`}>
+              <div className={`w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-8 ${pkg.color}`}>
                 <pkg.icon size={28} />
               </div>
 
               <h3 className="text-2xl font-display font-bold mb-2">{pkg.name}</h3>
-              <p className="text-zinc-500 text-sm mb-6 leading-tight">{pkg.bestFor}</p>
+              <p className="text-slate-500 text-sm mb-6 leading-tight">{pkg.bestFor}</p>
 
               <div className="mb-8">
-                <div className="text-zinc-500 text-xs font-mono uppercase tracking-widest mb-1">Starting from</div>
+                <div className="text-slate-500 text-xs font-mono uppercase tracking-widest mb-1">Starting from</div>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-display font-bold text-white">Rs {pkg.price}</span>
+                  <span className="text-3xl font-display font-bold text-slate-900">Rs {pkg.price}</span>
                 </div>
-                <div className="text-zinc-500 text-[10px] mt-1 italic">{pkg.range}</div>
+                <div className="text-slate-500 text-[10px] mt-1 italic">{pkg.range}</div>
               </div>
 
               <div className="space-y-4 flex-grow mb-10">
                 {pkg.features.map((feature, i) => (
-                  <div key={i} className="flex items-start gap-3 text-sm text-zinc-400">
+                  <div key={i} className="flex items-start gap-3 text-sm text-slate-600">
                     <Check size={16} className={`${pkg.color} mt-0.5 shrink-0`} />
                     <span>{feature}</span>
                   </div>
@@ -186,7 +186,7 @@ export default function Packages() {
                 className={`w-full py-4 rounded-full font-bold text-center transition-all ${
                   pkg.popular 
                     ? 'bg-accent-magenta text-background hover:scale-105' 
-                    : 'glass text-white hover:bg-white/10 border border-white/10'
+                    : 'glass text-slate-900 hover:bg-slate-100 border border-slate-200'
                 }`}
               >
                 Get Started
@@ -202,17 +202,17 @@ export default function Packages() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="p-12 rounded-[40px] glass border-white/5"
+            className="p-12 rounded-[40px] glass border-slate-100"
           >
             <h2 className="text-3xl font-display font-bold mb-8">Optimized for Sri Lanka</h2>
-            <p className="text-zinc-400 mb-10">
+            <p className="text-slate-600 mb-10">
               We understand the local market. Every package includes these essential integrations 
               to ensure your business succeeds in the Sri Lankan digital landscape.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {localFeatures.map((feat, i) => (
-                <div key={i} className="flex items-center gap-4 p-4 rounded-2xl glass border-white/5">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-accent-magenta">
+                <div key={i} className="flex items-center gap-4 p-4 rounded-2xl glass border-slate-100">
+                  <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-accent-magenta">
                     <feat.icon size={20} />
                   </div>
                   <span className="text-sm font-medium text-zinc-300">{feat.label}</span>
@@ -226,17 +226,17 @@ export default function Packages() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="p-12 rounded-[40px] glass border-white/5"
+            className="p-12 rounded-[40px] glass border-slate-100"
           >
             <h2 className="text-3xl font-display font-bold mb-8">Extra Services</h2>
             <div className="space-y-4">
               {addOns.map((addon, i) => (
-                <div key={i} className="flex items-center justify-between p-6 rounded-2xl glass border-white/5 group hover:border-white/10 transition-all">
+                <div key={i} className="flex items-center justify-between p-6 rounded-2xl glass border-slate-100 group hover:border-slate-200 transition-all">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-accent-magenta">
+                    <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-accent-magenta">
                       <Plus size={20} />
                     </div>
-                    <span className="text-white font-medium">{addon.service}</span>
+                    <span className="text-slate-900 font-medium">{addon.service}</span>
                   </div>
                   <div className="text-accent-magenta font-mono font-bold">Rs {addon.price}</div>
                 </div>
@@ -250,17 +250,17 @@ export default function Packages() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="p-12 rounded-[40px] bg-gradient-to-br from-accent-magenta/10 to-accent-magenta/10 border border-white/10 text-center"
+          className="p-12 rounded-[40px] bg-gradient-to-br from-accent-magenta/10 to-accent-magenta/10 border border-slate-200 text-center"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-white/10 text-accent-green text-xs font-mono mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-slate-200 text-accent-green text-xs font-mono mb-6">
             <Shield size={14} />
             <span>PRO TIP</span>
           </div>
           <h2 className="text-3xl font-display font-bold mb-6">Transparent Payment Process</h2>
           <p className="text-zinc-300 text-lg max-w-2xl mx-auto mb-0">
             To ensure trust and project security, we follow the industry-standard payment method in Sri Lanka: 
-            <span className="text-white font-bold"> 50% upfront payment</span> to initiate the project and 
-            <span className="text-white font-bold"> 50% upon successful completion</span>.
+            <span className="text-slate-900 font-bold"> 50% upfront payment</span> to initiate the project and 
+            <span className="text-slate-900 font-bold"> 50% upon successful completion</span>.
           </p>
         </motion.div>
       </div>

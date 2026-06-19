@@ -19,7 +19,7 @@ export default function InnovationLab() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-magenta text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-slate-200 text-accent-magenta text-sm font-medium mb-8"
           >
             <Beaker size={16} />
             <span>Experimental Technology</span>
@@ -35,7 +35,7 @@ export default function InnovationLab() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed"
           >
             Where we push the boundaries of what's possible. Our lab is dedicated to experimental 
             tech projects, prototypes, and creative solutions that define the future.
@@ -55,13 +55,13 @@ export default function InnovationLab() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-[40px] glass border-white/5 group hover:border-white/10 transition-all"
+              className="p-10 rounded-[40px] glass border-slate-100 group hover:border-slate-200 transition-all"
             >
-              <div className={`w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform ${area.color}`}>
+              <div className={`w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform ${area.color}`}>
                 <area.icon size={32} />
               </div>
               <h3 className="text-2xl font-display font-bold mb-4">{area.title}</h3>
-              <p className="text-zinc-400 leading-relaxed">{area.desc}</p>
+              <p className="text-slate-600 leading-relaxed">{area.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -70,7 +70,7 @@ export default function InnovationLab() {
         <div className="space-y-24">
           <div className="text-center">
             <h2 className="text-4xl font-display font-bold mb-4">Active Prototypes</h2>
-            <p className="text-zinc-500 font-mono uppercase tracking-widest text-sm">Research & Development</p>
+            <p className="text-slate-500 font-mono uppercase tracking-widest text-sm">Research & Development</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -83,7 +83,7 @@ export default function InnovationLab() {
                 transition={{ delay: index * 0.1 }}
                 className="group relative"
               >
-                <div className="aspect-video rounded-[40px] overflow-hidden glass border-white/5 p-2 mb-8">
+                <div className="aspect-video rounded-[40px] overflow-hidden glass border-slate-100 p-2 mb-8">
                   <div className="w-full h-full rounded-[32px] overflow-hidden relative">
                     <img
                       src={project.image}
@@ -110,11 +110,11 @@ export default function InnovationLab() {
                     <h3 className="text-2xl font-display font-bold mb-2">{project.title}</h3>
                     <div className="flex gap-2">
                       {project.tech.slice(0, 3).map(t => (
-                        <span key={t} className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">{t}</span>
+                        <span key={t} className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">{t}</span>
                       ))}
                     </div>
                   </div>
-                  <div className="w-10 h-10 rounded-full glass border-white/10 flex items-center justify-center text-accent-magenta">
+                  <div className="w-10 h-10 rounded-full glass border-slate-200 flex items-center justify-center text-accent-magenta">
                     <Code2 size={20} />
                   </div>
                 </div>
@@ -124,16 +124,16 @@ export default function InnovationLab() {
         </div>
 
         {/* CTA */}
-        <div className="mt-32 p-16 rounded-[40px] glass border-white/10 text-center relative overflow-hidden">
+        <div className="mt-32 p-16 rounded-[40px] glass border-slate-200 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-accent-magenta/10 to-transparent pointer-events-none" />
           <h2 className="text-4xl font-display font-bold mb-6 relative z-10">Have an experimental idea?</h2>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto mb-10 relative z-10">
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-10 relative z-10">
             We love collaborating on high-risk, high-reward technology prototypes. Let's build the 
             impossible together in our Innovation Lab.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-10 py-5 bg-accent-magenta text-white rounded-full font-bold text-lg hover:scale-105 transition-all relative z-10"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-accent-magenta text-slate-900 rounded-full font-bold text-lg hover:scale-105 transition-all relative z-10"
           >
             Collaborate with the Lab
             <ArrowRight size={20} />

@@ -80,12 +80,12 @@ export default function Services() {
                 <h3 className="text-4xl font-display font-bold mb-4">
                   {service.title}
                 </h3>
-                <p className="text-zinc-400 text-lg leading-tight max-w-md mb-8">
+                <p className="text-slate-600 text-lg leading-tight max-w-md mb-8">
                   {service.description}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   {service.benefits.map((benefit) => (
-                    <div key={benefit} className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-zinc-500">
+                    <div key={benefit} className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-500">
                       <div className={`w-1.5 h-1.5 rounded-full ${service.color.replace('text-', 'bg-')}`} />
                       {benefit}
                     </div>
@@ -105,15 +105,15 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
           <div className="bento-card p-8 bg-accent-magenta/5 border-accent-magenta/10">
             <h4 className="text-xl font-bold mb-2">Performance First</h4>
-            <p className="text-zinc-500 text-sm">We optimize every line of code for maximum speed and SEO efficiency.</p>
+            <p className="text-slate-500 text-sm">We optimize every line of code for maximum speed and SEO efficiency.</p>
           </div>
           <div className="bento-card p-8">
             <h4 className="text-xl font-bold mb-2">Scalable Design</h4>
-            <p className="text-zinc-500 text-sm">Our architectures grow with your business, from MVP to enterprise.</p>
+            <p className="text-slate-500 text-sm">Our architectures grow with your business, from MVP to enterprise.</p>
           </div>
-          <div className="bento-card p-8 bg-white/5">
+          <div className="bento-card p-8 bg-slate-50">
             <h4 className="text-xl font-bold mb-2">Global Reach</h4>
-            <p className="text-zinc-500 text-sm">Serving clients worldwide with 24/7 support and localized solutions.</p>
+            <p className="text-slate-500 text-sm">Serving clients worldwide with 24/7 support and localized solutions.</p>
           </div>
         </div>
       </div>

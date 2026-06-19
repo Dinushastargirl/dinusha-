@@ -84,14 +84,14 @@ export default function Process() {
                     <step.icon className={step.color} size={28} />
                   </div>
                   <h2 className="text-4xl font-display font-bold mb-4">{step.title}</h2>
-                  <p className="text-zinc-400 text-lg leading-tight max-w-md">
+                  <p className="text-slate-600 text-lg leading-tight max-w-md">
                     {step.description}
                   </p>
                 </div>
                 <div className="md:col-span-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {step.details.map((detail) => (
-                      <div key={detail} className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/5">
+                      <div key={detail} className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
                         <CheckCircle2 className={step.color} size={16} />
                         <span className="text-sm font-medium text-zinc-300">{detail}</span>
                       </div>
@@ -110,17 +110,17 @@ export default function Process() {
             <div className="bento-card p-8 bg-accent-magenta/5 border-accent-magenta/10">
               <Target className="text-accent-magenta mb-6" size={32} />
               <h3 className="text-2xl font-display font-bold mb-2">Outcome Driven</h3>
-              <p className="text-zinc-500 text-sm">We don't just build features; we build solutions that drive measurable business results.</p>
+              <p className="text-slate-500 text-sm">We don't just build features; we build solutions that drive measurable business results.</p>
             </div>
             <div className="bento-card p-8">
               <Zap className="text-accent-magenta mb-6" size={32} />
               <h3 className="text-2xl font-display font-bold mb-2">Rapid Iteration</h3>
-              <p className="text-zinc-500 text-sm">Our agile methodology allows us to move fast and adapt to changing requirements.</p>
+              <p className="text-slate-500 text-sm">Our agile methodology allows us to move fast and adapt to changing requirements.</p>
             </div>
             <div className="bento-card p-8 bg-accent-green/5 border-accent-green/10">
               <ShieldCheck className="text-accent-green mb-6" size={32} />
               <h3 className="text-2xl font-display font-bold mb-2">Quality First</h3>
-              <p className="text-zinc-500 text-sm">Rigorous testing and code reviews are baked into every step of our process.</p>
+              <p className="text-slate-500 text-sm">Rigorous testing and code reviews are baked into every step of our process.</p>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function Process() {
             <p className="text-zinc-600 text-xl mb-12 max-w-xl mx-auto">
               Let's turn your vision into a high-performance digital reality.
             </p>
-            <Link to="/contact" className="inline-flex items-center gap-4 px-12 py-6 bg-background text-white rounded-[32px] font-bold text-2xl hover:scale-105 transition-all">
+            <Link to="/contact" className="inline-flex items-center gap-4 px-12 py-6 bg-background text-slate-900 rounded-[32px] font-bold text-2xl hover:scale-105 transition-all">
               Book a Strategy Call <ArrowRight size={28} />
             </Link>
           </motion.div>

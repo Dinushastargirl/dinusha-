@@ -83,11 +83,11 @@ export default function CircularShowcase() {
               <div className="relative w-40 h-40 flex items-center justify-center">
                 <motion.div 
                   style={{ rotate: rotation }}
-                  className="absolute inset-0 border border-white/10 rounded-full"
+                  className="absolute inset-0 border border-slate-200 rounded-full"
                 >
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-accent-magenta rounded-full shadow-[0_0_10px_rgba(255,0,255,0.5)]" />
                 </motion.div>
-                <div className="text-6xl font-display font-bold text-white">
+                <div className="text-6xl font-display font-bold text-slate-900">
                   {projects[activeIndex].id}
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function CircularShowcase() {
                     transition={{ duration: 0.5 }}
                   >
                     <h3 className="text-4xl font-display font-bold mb-2">{projects[activeIndex].title}</h3>
-                    <p className="text-zinc-500 font-mono text-sm uppercase tracking-widest mb-6">
+                    <p className="text-slate-500 font-mono text-sm uppercase tracking-widest mb-6">
                       {projects[activeIndex].category}
                     </p>
                     <a 
@@ -129,7 +129,7 @@ export default function CircularShowcase() {
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 exit={{ opacity: 0, scale: 0.9, rotate: -5 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="w-full h-full rounded-[40px] overflow-hidden border border-white/10 p-2 glass"
+                className="w-full h-full rounded-[40px] overflow-hidden border border-slate-200 p-2 glass"
               >
                 <img 
                   src={projects[activeIndex].image} 
