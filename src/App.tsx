@@ -24,6 +24,8 @@ import Contact from "./pages/Contact";
 import BeulexDigital from "./pages/BeulexDigital";
 import BeulexLabs from "./pages/BeulexLabs";
 import Portfolio from "./pages/Portfolio";
+import ServiceDetail from "./pages/ServiceDetail";
+import Ventures from "./pages/Ventures";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -86,7 +88,9 @@ function AppContent() {
           <Route path="/services" element={<Services />} />
           <Route path="/services/digital" element={<BeulexDigital />} />
           <Route path="/services/labs" element={<BeulexLabs />} />
+          <Route path="/services/:division/:serviceId" element={<ServiceDetail />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/ventures" element={<Ventures />} />
           <Route path="/website-projects" element={<WebsiteProjects />} />
           <Route path="/creative-projects" element={<CreativeProjects />} />
           <Route path="/ai-softwares" element={<AISoftwares />} />

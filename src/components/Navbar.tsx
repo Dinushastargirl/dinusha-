@@ -20,6 +20,7 @@ const navLinks: NavItem[] = [
     ],
   },
   { name: "Portfolio", href: "/portfolio" },
+  { name: "Ventures", href: "/ventures" },
   { name: "Contact", href: "/contact" },
 ];
 

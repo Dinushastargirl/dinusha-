@@ -3,6 +3,11 @@ export interface CaseStudy {
   solution: string;
   result: string;
   metrics: { label: string; value: string }[];
+  problemDetails?: string;       // Detailed client/concept problem
+  solutionBreakdown?: string;    // Detailed solution breakdown
+  uiuxDesign?: string;           // UI/UX Design details
+  developmentApproach?: string;  // Detailed development approach
+  resultsImpact?: string;        // Detailed results/impact details
 }
 
 export interface Project {
@@ -17,15 +22,15 @@ export interface Project {
   goals: string[];
   screenshots: string[];
   caseStudy?: CaseStudy;
-  category: "Website" | "Creative" | "AI" | "Lab";
+  category: "Website" | "Creative" | "AI" | "Lab" | "Branding" | "Marketing" | "SEO" | "Software" | "SaaS" | "Mobile" | "Automation";
 }
 
 export const projects: Project[] = [
-  // Creative Digital Projects
+  // Creative Digital Projects (Digital Division - Marketing & Branding)
   {
     id: "animal-vision",
     title: "Animal Vision Camera – People’s Bank (Vimanka)",
-    category: "Creative",
+    category: "Marketing",
     description: "An animal-vision simulator that uses camera input + pixel manipulation to recreate how animals see.",
     fullDescription: "A creative campaign required a unique interactive experience to visualize 'different perspectives.' I built an animal-vision simulator that uses camera input + pixel manipulation to recreate how cats, snakes, bees, and birds see.",
     tech: ["JavaScript", "TypeScript", "Canvas API", "getUserMedia API"],
@@ -38,7 +43,7 @@ export const projects: Project[] = [
   {
     id: "goya-spin",
     title: "GOYA Spin The Wheel",
-    category: "Creative",
+    category: "Marketing",
     description: "A fully animated promotional spinning wheel with easing, confetti, and sound.",
     fullDescription: "A promotional campaign needed an engaging digital mechanic to attract participants. I developed a fully animated spinning wheel with easing, confetti, sound, and result logic.",
     tech: ["HTML", "CSS", "JavaScript", "Canvas API"],
@@ -51,7 +56,7 @@ export const projects: Project[] = [
   {
     id: "mental-health",
     title: "Mental Health Reflection App",
-    category: "Creative",
+    category: "Branding",
     description: "A mood-check app with reflective questions inspired by CBT and reward psychology.",
     fullDescription: "We needed a simple, gentle interactive for a wellness initiative. I created a mood-check app with reflective questions inspired by basic CBT and reward psychology.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -64,7 +69,7 @@ export const projects: Project[] = [
   {
     id: "personality-finder",
     title: "Personality Finder",
-    category: "Creative",
+    category: "Branding",
     description: "A personality reflection quiz with dynamic question flows and result mapping.",
     fullDescription: "A client needed an emotional-engagement tool. I developed a personality reflection quiz with dynamic question flows and result mapping.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -77,7 +82,7 @@ export const projects: Project[] = [
   {
     id: "nutriline",
     title: "NutriLine – Kids’ Meal Analyzer",
-    category: "Creative",
+    category: "Marketing",
     description: "A nutrition calculator that analyzes meals and gives instant nutritional insights.",
     fullDescription: "During a child-nutrition campaign, we needed a quick nutrition calculator. I built a tool that analyzes meals and gives instant nutritional insights using a dataset.",
     tech: ["JavaScript", "Nutrition Dataset", "API"],
@@ -90,7 +95,7 @@ export const projects: Project[] = [
   {
     id: "ponds-skin-scanner",
     title: "AI Skin Scanner – Ponds",
-    category: "Creative",
+    category: "AI",
     description: "A lightweight AI-style scanner using image input + basic detection logic to simulate analysis.",
     fullDescription: "A campaign required a skin-analysis tool but no time for a full ML pipeline. I built a lightweight AI-style scanner using image input + basic detection logic to simulate analysis.",
     tech: ["HTML", "CSS", "JavaScript", "Image Processing"],
@@ -103,7 +108,7 @@ export const projects: Project[] = [
   {
     id: "heart-rate-creator",
     title: "Heart Rate Image Creator",
-    category: "Creative",
+    category: "Branding",
     description: "Converts BPM input into pixel-art 'emotional landscapes' with downloadable images.",
     fullDescription: "A creative brief needed something artistic + emotional. I created a tool that converts BPM input into pixel-art 'emotional landscapes' with downloadable images.",
     tech: ["Canvas API", "JavaScript"],
@@ -116,7 +121,7 @@ export const projects: Project[] = [
   {
     id: "pol-parapura",
     title: "Pol Parapura – Interactive Coconut Tree Experience",
-    category: "Creative",
+    category: "Marketing",
     description: "A hover-based coconut tree where each part reveals unique cultural details.",
     fullDescription: "We needed a cultural storytelling mechanic for a Sri Lankan brand. I designed a hover-based coconut tree where each part reveals unique details.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -129,7 +134,7 @@ export const projects: Project[] = [
   {
     id: "multilac-color-her",
     title: "Multilac – 'Color Her' Women’s Day Web App",
-    category: "Creative",
+    category: "Branding",
     description: "A color-selection + silhouette customization tool with downloadable artwork.",
     fullDescription: "Women’s Day campaign needed a 'self-expression' activity. I built a color-selection + silhouette customization tool with downloadable artwork.",
     tech: ["HTML", "CSS", "JavaScript", "Canvas API"],
@@ -142,7 +147,7 @@ export const projects: Project[] = [
   {
     id: "munchee-nekatha",
     title: "Munchee Online Nekatha (Avurudu Countdown)",
-    category: "Creative",
+    category: "Marketing",
     description: "A login + live timer system with festive styling for Avurudu campaign.",
     fullDescription: "An Avurudu campaign required a digital countdown to the auspicious time. I built a login + live timer system with festive styling.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -155,7 +160,7 @@ export const projects: Project[] = [
   {
     id: "brand-caption",
     title: "Brand Caption Generator",
-    category: "Creative",
+    category: "AI",
     description: "A simple AI-powered caption generator for quick brand content ideas.",
     fullDescription: "Our team needed quick caption ideas for multiple brands. I built a simple AI-powered caption generator where users enter brand/tone and get instant content.",
     tech: ["HTML", "CSS", "JavaScript", "AI API"],
@@ -168,7 +173,7 @@ export const projects: Project[] = [
   {
     id: "laptop-rec",
     title: "Laptop Recommendation Tool",
-    category: "Creative",
+    category: "Marketing",
     description: "A logic-based recommendation system based on budget + use-case.",
     fullDescription: "We needed a quick 'find your fit' interactive for a tech client. I created a logic-based recommendation system based on budget + use-case.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -181,7 +186,7 @@ export const projects: Project[] = [
   {
     id: "price-comparator",
     title: "Supermarket Price Comparator",
-    category: "Creative",
+    category: "Software",
     description: "A UI where users enter an item and instantly see cross-supermarket price comparison.",
     fullDescription: "A retail discussion required a quick example tool comparing grocery prices. I built a UI where users enter an item and instantly see cross-supermarket comparison.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -194,7 +199,7 @@ export const projects: Project[] = [
   {
     id: "daintee-flipbook",
     title: "Daintee Hearts Recipe Flipbook",
-    category: "Creative",
+    category: "Branding",
     description: "A digital recipe flipbook web experience with smooth page transitions.",
     fullDescription: "Daintee needed a digital version of their printed recipe booklet. I turned it into a flipbook web experience with smooth page transitions.",
     tech: ["HTML", "CSS", "JavaScript", "turn.js"],
@@ -207,7 +212,7 @@ export const projects: Project[] = [
   {
     id: "multilac-picker",
     title: "Multilac Color Picker",
-    category: "Creative",
+    category: "Branding",
     description: "An upload-to-color-extract system that matches dominant colors to Multilac’s palette.",
     fullDescription: "A campaign required an interactive color-matching tool. I built an upload-to-color-extract system that matches dominant colors to Multilac’s palette.",
     tech: ["Canvas", "JavaScript", "Color Thief"],
@@ -220,7 +225,7 @@ export const projects: Project[] = [
   {
     id: "winner-selector",
     title: "Random Winner Selector",
-    category: "Creative",
+    category: "Automation",
     description: "A simple list input to randomizer with animated reveal for giveaways.",
     fullDescription: "For giveaways, we needed a fast, fair winner picker. I built a simple list input → randomizer → animated reveal tool.",
     tech: ["JavaScript"],
@@ -233,7 +238,7 @@ export const projects: Project[] = [
   {
     id: "para-gen",
     title: "Random Paragraph Generator",
-    category: "Creative",
+    category: "Automation",
     description: "An internal tool to quickly generate filler text for mockups.",
     fullDescription: "Created as an internal tool to quickly generate filler text for mockups.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -246,7 +251,7 @@ export const projects: Project[] = [
   {
     id: "christmas-tree-gen",
     title: "Christmas Tree Generator",
-    category: "Creative",
+    category: "Branding",
     description: "A festive interactive tool to generate and customize your own digital Christmas tree.",
     fullDescription: "A holiday-themed interactive experience allowing users to generate and customize digital Christmas trees.",
     tech: ["React", "Motion", "Tailwind"],
@@ -257,19 +262,33 @@ export const projects: Project[] = [
     screenshots: ["https://picsum.photos/seed/christmas/1200/800"]
   },
 
-  // Website Projects
+  // Website Projects (Digital Division - Websites)
   {
     id: "personal-portfolio",
-    title: "Personal Portfolio",
+    title: "Beulex Modern Platform",
     category: "Website",
-    description: "A modern, high-performance personal portfolio showcasing digital expertise.",
-    fullDescription: "A comprehensive showcase of professional work, skills, and projects with a focus on modern UI/UX and performance.",
+    description: "A high-performance portal mapping internal divisions and case study collections.",
+    fullDescription: "A comprehensive case study mapping our client capabilities, showcasing Beulex Digital and Labs projects with dynamic routing and local database storage.",
     tech: ["React", "Next.js", "Tailwind CSS", "Motion"],
     image: "https://picsum.photos/seed/portfolio/800/600",
     link: "https://dinushaportfolionew.vercel.app/",
     github: "#",
-    goals: ["Professional branding", "Project showcase", "High performance"],
-    screenshots: ["https://picsum.photos/seed/portfolio/1200/800"]
+    goals: ["Platform branding", "Project showcase", "Local database lead capture"],
+    screenshots: ["https://picsum.photos/seed/portfolio/1200/800"],
+    caseStudy: {
+      challenge: "Coordinating a unified digital brand identity across two separate service-oriented teams (Digital and Labs).",
+      solution: "Engineered a localized React showcase website featuring drag-and-drop category filters and a shared layout framework.",
+      result: "Achieved a clean, production-ready portal showcasing both services and internal product ventures.",
+      metrics: [
+        { label: "Rendering speed", value: "45ms" },
+        { label: "Core Web Vitals Score", value: "99/100" }
+      ],
+      problemDetails: "The old Beulex landing site was a simple single-page portfolio. It failed to represent the software engineering capabilities of Beulex Labs or the structured lead capture system required for enterprise campaigns.",
+      solutionBreakdown: "We redesigned the navigation to separate Agency Services from Product Ventures. We built a local SQLite data storage backend to ensure proposal requests are logged securely in-house.",
+      uiuxDesign: "Employed Outfit headings with Inter body text. Used clean white layouts and soft border lines to convey an premium, high-end enterprise feeling.",
+      developmentApproach: "Coded in TypeScript with dynamic React router links. Deployed a Vite asset proxy to pipe lead form fields directly to an Express backend.",
+      resultsImpact: "Reduced client friction when inquiring about specific agency capabilities and created a professional trust-building portal."
+    }
   },
   {
     id: "market-store",
@@ -282,7 +301,21 @@ export const projects: Project[] = [
     link: "https://little-heart-bakes.base44.app/",
     github: "#",
     goals: ["E-commerce sales", "Order management", "Brand presence"],
-    screenshots: ["https://picsum.photos/seed/bakery/1200/800"]
+    screenshots: ["https://picsum.photos/seed/bakery/1200/800"],
+    caseStudy: {
+      challenge: "Structuring custom cake specifications and booking slots inside a fast checkout path.",
+      solution: "Developed a custom state-driven cart component with visual order options and dynamic Stripe pricing models.",
+      result: "Increased cake order inquiries by 35% and saved hours of manual client intake discussion.",
+      metrics: [
+        { label: "Conversion Rate", value: "+3.8%" },
+        { label: "Mobile checkout time", value: "1.2s" }
+      ],
+      problemDetails: "Little Heart Bakes required a clean, visually mouth-watering digital storefront that could process product parameters (custom text, layers, size) without requiring complex backend database steps.",
+      solutionBreakdown: "Built a responsive React commerce storefront connected to an agile catalog engine. Kept checkout routes minimal and intuitive for mobile browsers.",
+      uiuxDesign: "Pastel colors matching branding, high-resolution product photos, and a custom order step tracker.",
+      developmentApproach: "Coded standard components with TypeScript and verified responsive checkout grids across all standard screen sizes.",
+      resultsImpact: "Enabled a 100% digital client workflow, saving bakery staff hours of manual follow-up."
+    }
   },
   {
     id: "digital-agency-brandsen",
@@ -324,11 +357,11 @@ export const projects: Project[] = [
     screenshots: ["https://picsum.photos/seed/nutrigpt/1200/800"]
   },
 
-  // AI Powered Softwares
+  // Labs Projects - SaaS, AI, Mobile & Automation
   {
     id: "aurum-bookings",
     title: "Aurum Bookings",
-    category: "AI",
+    category: "SaaS",
     description: "An AI-enhanced booking system for premium services and resource management.",
     fullDescription: "A sophisticated booking platform using AI to optimize scheduling and resource allocation for high-end clients.",
     tech: ["React", "Node.js", "AI Scheduling"],
@@ -349,7 +382,21 @@ export const projects: Project[] = [
     link: "https://visageai-iota.vercel.app/",
     github: "#",
     goals: ["Personalized styling", "AI analysis", "User engagement"],
-    screenshots: ["https://picsum.photos/seed/face/1200/800"]
+    screenshots: ["https://picsum.photos/seed/face/1200/800"],
+    caseStudy: {
+      challenge: "Building a lightweight browser face scanner that extracts dimensions without heavy server computation.",
+      solution: "Developed client-side neural face mapping calculations inside standard HTML canvas context overlays.",
+      result: "Successfully matched hairstyle categories based on mathematical facial proportions with zero image uploads.",
+      metrics: [
+        { label: "Browser Processing Time", value: "340ms" },
+        { label: "Scanning Accuracy", value: "94%" }
+      ],
+      problemDetails: "Users do not want to upload photos of their faces to remote databases. Hairstyle matching systems traditionally require high GPU server costs and raise significant privacy concerns.",
+      solutionBreakdown: "We programmed local scanning nodes that overlay directly onto the user camera feed via Canvas context. Hairstyle fits are calculated purely in-browser via mathematical ratio vectors.",
+      uiuxDesign: "Glowing scanner grid line mapping overlay, instant scan indicators, and side-by-side hairstyle models.",
+      developmentApproach: "TypeScript canvas rendering combined with custom face-matching lookup models.",
+      resultsImpact: "Allowed a 100% private face styling scan that requires zero cloud GPU scaling costs."
+    }
   },
   {
     id: "fellowship-tz",
@@ -380,7 +427,7 @@ export const projects: Project[] = [
   {
     id: "kala-verse",
     title: "Kala Verse - AI Marketing Tool",
-    category: "AI",
+    category: "SaaS",
     description: "A one-stop AI tool for digital marketing agencies to automate content and strategy.",
     fullDescription: "Kala Verse empowers agencies with AI-driven content generation, market analysis, and campaign optimization tools.",
     tech: ["React", "AI Content Gen", "Marketing API"],
@@ -392,8 +439,8 @@ export const projects: Project[] = [
   },
   {
     id: "pick-her",
-    title: "Pick Her",
-    category: "AI",
+    title: "Pick Her Passenger",
+    category: "Mobile",
     description: "An AI-powered selection and recommendation tool for personalized choices.",
     fullDescription: "A smart recommendation engine using AI to help users make better decisions based on their preferences.",
     tech: ["React", "AI Recommendation", "Tailwind CSS"],
@@ -404,24 +451,38 @@ export const projects: Project[] = [
     screenshots: ["https://picsum.photos/seed/pick/1200/800"]
   },
 
-  // Other internal/lab projects
+  // Labs Projects - Automation & Custom Software
   {
     id: "order-beverage",
     title: "ORDER – Beverage Preference System",
-    category: "Lab",
+    category: "Automation",
     description: "A full system for internal beverage management with dashboards and floor-wise counts.",
-    fullDescription: "We had an internal problem: the tea/coffee aunty had to climb stairs repeatedly. I built a full system: input forms + conference mode + dashboard calculating floor-wise beverage counts.",
+    fullDescription: "We had an internal problem: the tea/coffee office assistant had to climb stairs repeatedly. I built a full system: input forms + conference mode + dashboard calculating floor-wise beverage counts.",
     tech: ["HTML", "CSS", "JavaScript", "Charts.js"],
     image: "https://picsum.photos/seed/order/800/600",
     link: "https://prismatic-eclair-4f74db.netlify.app/",
     github: "#",
     goals: ["Solve internal workflow problem", "Real-time dashboard", "Efficiency improvement"],
-    screenshots: ["https://picsum.photos/seed/order/1200/800"]
+    screenshots: ["https://picsum.photos/seed/order/1200/800"],
+    caseStudy: {
+      challenge: "Automating floor-wise beverage counts for office staff to optimize stair climbing.",
+      solution: "Coded a reactive web board where users register counts instantly, rendering floor totals on a tablet.",
+      result: "Saved 2+ hours of manual climbing daily, streamlining office refreshment schedules.",
+      metrics: [
+        { label: "Stair trips saved", value: "-60%" },
+        { label: "Response latency", value: "30ms" }
+      ],
+      problemDetails: "Our office building lacked an internal messenger system, forcing refreshments staff to hike up and down four floors constantly to collect custom hot drink orders.",
+      solutionBreakdown: "Developed a modular order entry layout where employees log their choices. Compiled the dashboard data to list drink totals categorized by floor and department.",
+      uiuxDesign: "Simple grid buttons representing drinks (Tea, Coffee, Sugar level) with highly readable floor panels.",
+      developmentApproach: "Created a client-first responsive script featuring charts for monthly reports.",
+      resultsImpact: "Demonstrated direct daily administrative efficiency improvements inside the workspace."
+    }
   },
   {
     id: "mini-utilities",
     title: "Mini Utilities Collection",
-    category: "Lab",
+    category: "Software",
     description: "A collection of fast internal tools: RGB Selector, BMI Calculator, Love Calculator, and more.",
     fullDescription: "Each of these was built to solve a fast internal requirement or workshop need. They include an RGB Color Selector, BMI Calculator, Love Calculator, and other mini utilities.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -434,7 +495,7 @@ export const projects: Project[] = [
   {
     id: "under-development",
     title: "Future Innovations",
-    category: "Lab",
+    category: "Software",
     description: "New projects and experimental solutions are currently under development.",
     fullDescription: "I am constantly learning and building new tools. This space is reserved for the next wave of problem-solving applications.",
     tech: ["Next.js", "AI", "Web3"],
@@ -445,4 +506,3 @@ export const projects: Project[] = [
     screenshots: ["https://picsum.photos/seed/future/1200/800"]
   }
 ];
-

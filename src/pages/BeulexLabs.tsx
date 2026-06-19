@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, Code2, Cpu, Smartphone, Database, Server } from "lucide-react";
 import PackageModal from "../components/PackageModal";
-import LeadCaptureForm from "../components/LeadCaptureForm";
 
 const labServices = [
   {
+    id: "custom-software",
     icon: Code2,
     title: "Custom Software Development",
     overview: "Bespoke software solutions tailored to your unique business processes.",
@@ -13,6 +14,7 @@ const labServices = [
     industries: "Finance, Healthcare, Logistics"
   },
   {
+    id: "saas-development",
     icon: Server,
     title: "SaaS Development",
     overview: "Scalable and secure multi-tenant architectures for your SaaS product.",
@@ -21,6 +23,7 @@ const labServices = [
     industries: "B2B Tech, EdTech, Real Estate"
   },
   {
+    id: "mobile-applications",
     icon: Smartphone,
     title: "Mobile Applications",
     overview: "High-performance native and cross-platform mobile experiences.",
@@ -29,6 +32,7 @@ const labServices = [
     industries: "Retail, Fitness, Delivery"
   },
   {
+    id: "ai-solutions",
     icon: Cpu,
     title: "AI Solutions",
     overview: "Intelligent systems to automate processes and generate insights.",
@@ -37,8 +41,9 @@ const labServices = [
     industries: "Healthcare, Finance, E-commerce"
   },
   {
+    id: "business-automation",
     icon: Database,
-    title: "Business Automation",
+    title: "Business Automation Systems",
     overview: "Streamline operations and eliminate manual tasks with smart automation.",
     features: ["Workflow Automation", "Data Integration", "Custom Dashboards", "RPA"],
     technologies: "Make, Zapier, Python, Custom Scripts",
@@ -87,96 +92,105 @@ const labPackages = [
 
 export default function BeulexLabs() {
   const [isPackagesOpen, setIsPackagesOpen] = useState(false);
-  const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <div className="pt-20 pb-24 bg-white min-h-screen">
+    <div className="pt-20 pb-24 bg-white min-h-screen grid-bg relative overflow-hidden">
+      
+      {/* Decorative gradient */}
+      <div className="absolute top-1/4 -right-20 w-80 h-80 bg-accent-cyan/5 rounded-full filter blur-3xl pointer-events-none" />
+
       {/* Hero Section */}
-      <section className="py-20 md:py-32 px-4 relative overflow-hidden bg-slate-900 border-b border-slate-800">
+      <section className="py-20 md:py-32 px-4 relative overflow-hidden bg-slate-900 border-b border-slate-800 text-white">
         <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <div className="inline-block p-4 rounded-2xl bg-indigo-500/20 text-indigo-400 mb-6">
+          <div className="inline-block p-4 rounded-2xl bg-indigo-500/20 text-indigo-400 mb-6 border border-indigo-500/10">
             <Code2 className="w-8 h-8" />
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 tracking-tight leading-none">
             Beulex Labs
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Cutting-edge software, SaaS platforms, and enterprise AI solutions engineered for scale.
+            Cutting-edge custom software, multi-tenant SaaS platforms, and enterprise AI integrations engineered for scale.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button 
               onClick={() => setIsPackagesOpen(true)}
-              className="bg-accent-magenta text-white px-8 py-4 rounded-full font-bold text-lg hover:opacity-90 transition-all shadow-lg shadow-accent-magenta/20 flex items-center"
+              className="bg-accent-cyan text-slate-950 px-8 py-4 rounded-full font-bold text-lg hover:opacity-90 transition-all shadow-md flex items-center"
             >
-              View Packages <ArrowRight className="ml-2 w-5 h-5" />
+              View Packages <ArrowRight className="ml-2 w-5 h-5 text-slate-950" />
             </button>
-            <button 
-              onClick={() => setIsFormOpen(true)}
-              className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all backdrop-blur-sm"
+            <Link 
+              to="/contact?service=Beulex Labs Engineering"
+              className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all backdrop-blur-sm flex items-center"
             >
               Request Proposal
-            </button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 px-4 max-w-7xl mx-auto">
+      <section className="py-24 px-4 max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Engineering Capabilities</h2>
-          <p className="text-lg text-slate-600">Robust technical solutions for complex business problems.</p>
+          <h2 className="text-4xl font-display font-bold text-slate-900 mb-4">Engineering Capabilities</h2>
+          <p className="text-lg text-slate-600">Robust technical systems built to solve complex operational problems.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {labServices.map((service, idx) => (
-            <div key={idx} className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
-              <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
+          {labServices.map((service) => (
+            <div key={service.id} className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
+              <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6 border border-indigo-100/30">
                 <service.icon className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">{service.title}</h3>
-              <p className="text-slate-600 mb-6">{service.overview}</p>
+              <h3 className="text-2xl font-display font-bold text-slate-900 mb-3">{service.title}</h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">{service.overview}</p>
               
               <div className="space-y-4 mb-8 flex-grow">
                 <div>
-                  <div className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Features</div>
+                  <div className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-2">Key Features</div>
                   <ul className="text-sm text-slate-600 space-y-1">
-                    {service.features.map((f, i) => <li key={i} className="flex items-center"><div className="w-1 h-1 bg-accent-magenta rounded-full mr-2"></div>{f}</li>)}
+                    {service.features.map((f, i) => (
+                      <li key={i} className="flex items-center">
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent-cyan mr-2"></div>
+                        {f}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Technologies</div>
-                  <p className="text-sm text-slate-600">{service.technologies}</p>
+                  <div className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-1">Technologies</div>
+                  <p className="text-sm text-slate-700 font-semibold">{service.technologies}</p>
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Industries Served</div>
-                  <p className="text-sm text-slate-600">{service.industries}</p>
+                  <div className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-1">Target Industries</div>
+                  <p className="text-xs text-slate-500">{service.industries}</p>
                 </div>
               </div>
 
-              <button 
-                onClick={() => setIsPackagesOpen(true)}
-                className="w-full py-3 rounded-xl border-2 border-slate-200 text-slate-900 font-bold hover:border-accent-magenta hover:text-accent-magenta transition-colors mt-auto"
-              >
-                View Packages
-              </button>
+              <div className="space-y-3 mt-auto">
+                <Link 
+                  to={`/services/labs/${service.id}`}
+                  className="w-full py-3.5 rounded-xl bg-slate-950 text-white font-bold text-xs uppercase tracking-widest hover:opacity-95 transition-all text-center block shadow-sm"
+                >
+                  Explore Capability Details
+                </Link>
+                <button 
+                  onClick={() => setIsPackagesOpen(true)}
+                  className="w-full py-3 rounded-xl border border-slate-200 text-slate-600 font-semibold hover:border-slate-300 hover:text-slate-900 transition-colors text-xs uppercase tracking-wider"
+                >
+                  View Group Packages
+                </button>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Modals */}
+      {/* Package Modal */}
       {isPackagesOpen && (
         <PackageModal 
           serviceName="Beulex Labs" 
           packages={labPackages} 
           onClose={() => setIsPackagesOpen(false)} 
-        />
-      )}
-      
-      {isFormOpen && (
-        <LeadCaptureForm 
-          selectedService="Beulex Labs" 
-          onClose={() => setIsFormOpen(false)} 
         />
       )}
     </div>

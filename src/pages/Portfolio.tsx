@@ -10,7 +10,13 @@ export default function Portfolio() {
 
   // Map categories to divisions
   const getProjectDivision = (project: Project): "Digital" | "Labs" => {
-    if (project.category === "Website" || project.category === "Creative") {
+    if (
+      project.category === "Website" || 
+      project.category === "Branding" || 
+      project.category === "Marketing" || 
+      project.category === "SEO" ||
+      project.category === "Creative"
+    ) {
       return "Digital";
     }
     return "Labs";
@@ -25,12 +31,17 @@ export default function Portfolio() {
       return false;
     }
 
-    // Sub-filters
+    // Sub-filters mapping
     if (subFilter === "All") return true;
     if (subFilter === "Websites") return project.category === "Website";
-    if (subFilter === "Creative Campaigns") return project.category === "Creative";
+    if (subFilter === "Branding Projects") return project.category === "Branding";
+    if (subFilter === "Marketing Campaigns") return project.category === "Marketing";
+    if (subFilter === "SEO Projects") return project.category === "SEO";
+    if (subFilter === "Software Systems") return project.category === "Software";
+    if (subFilter === "SaaS Products") return project.category === "SaaS";
+    if (subFilter === "Mobile Applications") return project.category === "Mobile";
     if (subFilter === "AI Solutions") return project.category === "AI";
-    if (subFilter === "Custom Software") return project.category === "Lab";
+    if (subFilter === "Business Automation Systems") return project.category === "Automation";
 
     return true;
   });
@@ -38,14 +49,34 @@ export default function Portfolio() {
   // Get available sub-filters based on division
   const getSubFilters = () => {
     if (activeDivision === "All") return ["All"];
-    if (activeDivision === "Digital") return ["All", "Websites", "Creative Campaigns"];
-    if (activeDivision === "Labs") return ["All", "AI Solutions", "Custom Software"];
+    if (activeDivision === "Digital") {
+      return ["All", "Websites", "Branding Projects", "Marketing Campaigns", "SEO Projects"];
+    }
+    if (activeDivision === "Labs") {
+      return ["All", "Software Systems", "SaaS Products", "Mobile Applications", "AI Solutions", "Business Automation Systems"];
+    }
     return ["All"];
   };
 
   const handleDivisionChange = (division: "All" | "Digital" | "Labs") => {
     setActiveDivision(division);
     setSubFilter("All");
+  };
+
+  // Human readable category badge
+  const getCategoryLabel = (category: Project["category"]) => {
+    switch (category) {
+      case "Website": return "Website Project";
+      case "Branding": return "Branding Project";
+      case "Marketing": return "Marketing Campaign";
+      case "SEO": return "SEO Project";
+      case "Software": return "Software System";
+      case "SaaS": return "SaaS Product";
+      case "Mobile": return "Mobile Application";
+      case "AI": return "AI Solution";
+      case "Automation": return "Business Automation";
+      default: return category;
+    }
   };
 
   return (
@@ -204,6 +235,12 @@ export default function Portfolio() {
                       ))}
                     </div>
 
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-[10px] font-mono font-bold tracking-wider text-slate-400 uppercase">
+                        {getCategoryLabel(project.category)}
+                      </span>
+                    </div>
+
                     <h3 className="text-2xl font-display font-bold mb-3 group-hover:text-accent-cyan transition-colors leading-tight">
                       {project.title}
                     </h3>
@@ -219,7 +256,7 @@ export default function Portfolio() {
                         to={`/projects/${project.id}`}
                         className="px-5 py-2.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-bold uppercase tracking-widest text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-all"
                       >
-                        View Details
+                        View Case Study
                       </Link>
                     )}
                     {project.link !== "#" && (
