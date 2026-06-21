@@ -59,5 +59,17 @@ export const ventures: Venture[] = [
     expectedImpact: "Reduces ticket resolution loops from 3 hours to under 3 minutes with 90% human approval on initial drafts.",
     techStack: ["Node.js", "WebSockets", "Gemini API", "React", "Tailwind CSS"],
     image: "https://picsum.photos/seed/desk/800/600"
+  },
+  {
+    id: "beulex-cortex",
+    title: "Beulex Cortex",
+    tagline: "Unified AI orchestration and intelligence layer for enterprise workflows.",
+    description: "An advanced intelligence product layer designed to deploy secure LLM pipelines, Retrieval-Augmented Generation (RAG), and agentic workflows directly onto local infrastructure without training data leaks.",
+    status: "Active SaaS",
+    problemSolved: "Enterprises want to harness the power of LLMs and generative agents, but compliance rules and privacy concerns prevent sending sensitive corporate data to external APIs.",
+    solutionDetails: "A modular AI pipeline that bridges private local vector stores and databases with secure model endpoints, supporting real-time data ingestion, local memory, and multi-agent coordination.",
+    expectedImpact: "Eliminates public API leakage risks completely and lowers token processing expenses by 45% via local caching layers.",
+    techStack: ["Python", "FastAPI", "LangChain", "Vector DB", "React", "Gemini API"],
+    image: "https://picsum.photos/seed/cortex/800/600"
   }
 ];

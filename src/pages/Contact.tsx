@@ -328,11 +328,27 @@ export default function Contact() {
                         <option key={s.id} value={s.name}>{s.name}</option>
                       ))}
                     </optgroup>
+                    <optgroup label="Beulex Startup">
+                      <option value="Beulex Startup Acceleration">Beulex Startup Acceleration</option>
+                      <option value="Startup Launch Package">Startup Launch Package</option>
+                      <option value="Business Proposal Development">Business Proposal Development</option>
+                      <option value="MVP Planning">MVP Planning</option>
+                      <option value="Digital Presence Setup">Digital Presence Setup</option>
+                      <option value="Startup Growth Strategy">Startup Growth Strategy</option>
+                    </optgroup>
+                    <optgroup label="Beulex Academy">
+                      <option value="Corporate Training">Corporate Training</option>
+                      <option value="Webinars">Webinars</option>
+                      <option value="Student Training">Student Training</option>
+                      <option value="AI Awareness Programs">AI Awareness Programs</option>
+                      <option value="AI Cert Awareness Program">AI Cert Awareness Program</option>
+                    </optgroup>
                     <optgroup label="Beulex Ventures (Inquiry)">
                       <option value="Venture: Beulex CRM Lite">Beulex CRM Lite</option>
                       <option value="Venture: Shelf Analyzer">Shelf Analyzer</option>
                       <option value="Venture: Headless Commerce Bridge">Headless Commerce Bridge</option>
                       <option value="Venture: Agent Desk Support Hub">Agent Desk Support Hub</option>
+                      <option value="Venture: Beulex Cortex">Beulex Cortex (AI product layer)</option>
                     </optgroup>
                     <option value="Other / Custom Project">Other / Custom Software</option>
                   </select>

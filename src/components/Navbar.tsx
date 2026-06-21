@@ -6,22 +6,63 @@ import { Link, useLocation } from "react-router-dom";
 interface NavItem {
   name: string;
   href?: string;
-  dropdown?: { name: string; href: string; desc?: string }[];
+  dropdown?: boolean;
 }
 
 const navLinks: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  {
-    name: "Services",
-    dropdown: [
-      { name: "Beulex Digital", href: "/services/digital", desc: "Digital growth & marketing solutions" },
-      { name: "Beulex Labs", href: "/services/labs", desc: "Custom software & AI solutions" },
-    ],
-  },
+  { name: "Services", dropdown: true },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Ventures", href: "/ventures" },
   { name: "Contact", href: "/contact" },
+];
+
+const servicesMenuData = [
+  {
+    title: "Beulex Digital",
+    href: "/services/digital",
+    items: [
+      { name: "Website Development", href: "/services/digital/website-development" },
+      { name: "Branding & Identity", href: "/services/digital/branding-identity" },
+      { name: "Social Media Management", href: "/services/digital/social-media-management" },
+      { name: "Content Strategy", href: "/services/digital?service=content-strategy" },
+      { name: "Marketing Strategy", href: "/services/digital?service=marketing-strategy" },
+    ],
+  },
+  {
+    title: "Beulex Labs",
+    href: "/services/labs",
+    items: [
+      { name: "SaaS Development", href: "/services/labs/saas-development" },
+      { name: "Custom Software Development", href: "/services/labs/custom-software" },
+      { name: "AI Solutions", href: "/services/labs/ai-solutions" },
+      { name: "Business Automation", href: "/services/labs/business-automation" },
+      { name: "Mobile Apps", href: "/services/labs/mobile-applications" },
+    ],
+  },
+  {
+    title: "Beulex Startup",
+    href: "/services/startup",
+    items: [
+      { name: "Startup Launch Package", href: "/packages" },
+      { name: "Business Proposal Development", href: "/contact?service=Business Proposal Development" },
+      { name: "MVP Planning", href: "/contact?service=MVP Planning" },
+      { name: "Digital Presence Setup", href: "/contact?service=Digital Presence Setup" },
+      { name: "Startup Growth Strategy", href: "/contact?service=Startup Growth Strategy" },
+    ],
+  },
+  {
+    title: "Beulex Academy",
+    href: "/beulex-academy",
+    items: [
+      { name: "Corporate Training", href: "/beulex-academy?program=corporate-training" },
+      { name: "Webinars", href: "/beulex-academy?program=webinars" },
+      { name: "Student Training", href: "/beulex-academy?program=student-training" },
+      { name: "AI Awareness Programs", href: "/beulex-academy?program=ai-awareness" },
+      { name: "AI Cert Awareness Program", href: "/beulex-academy?program=ai-cert" },
+    ],
+  },
 ];
 
 export default function Navbar() {
@@ -94,27 +135,55 @@ export default function Navbar() {
                   )}
 
                   <AnimatePresence>
-                    {activeDropdown === link.name && link.dropdown && (
+                    {activeDropdown === link.name && link.dropdown && link.name === "Services" && (
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-72"
+                        className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[980px] lg:w-[1100px]"
                       >
-                        <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xl p-2">
-                          <div className="space-y-1">
-                            {link.dropdown.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                to={subItem.href}
-                                className="block p-4 rounded-xl hover:bg-slate-50 transition-colors group"
-                              >
-                                <div className="text-sm font-bold text-slate-900 group-hover:text-accent-magenta transition-colors">
-                                  {subItem.name}
-                                </div>
-                                {subItem.desc && <div className="text-xs text-slate-500 mt-0.5">{subItem.desc}</div>}
-                              </Link>
+                        <div className="bg-white/95 backdrop-blur-2xl border border-slate-200/80 rounded-3xl overflow-hidden shadow-2xl p-8 text-left">
+                          <div className="grid grid-cols-4 gap-8">
+                            {servicesMenuData.map((division) => (
+                              <div key={division.title} className="flex flex-col">
+                                <Link
+                                  to={division.href}
+                                  onClick={() => setActiveDropdown(null)}
+                                  className="group/title flex items-center gap-1.5 font-display font-extrabold text-slate-900 hover:text-slate-800 transition-colors text-base mb-5"
+                                >
+                                  <span className={`transition-transform duration-200 group-hover/title:translate-y-0.5 text-[10px] ${
+                                    division.title.includes("Digital") ? "text-accent-magenta" :
+                                    division.title.includes("Labs") ? "text-accent-cyan" :
+                                    division.title.includes("Startup") ? "text-accent-green" :
+                                    "text-violet-600"
+                                  }`}>
+                                    ▼
+                                  </span>
+                                  {division.title}
+                                </Link>
+                                <ul className="space-y-3.5">
+                                  {division.items.map((subItem) => (
+                                    <li key={subItem.name}>
+                                      <Link
+                                        to={subItem.href}
+                                        onClick={() => setActiveDropdown(null)}
+                                        className="group/item flex items-start gap-2 text-sm text-slate-600 hover:text-slate-955 transition-colors py-0.5"
+                                      >
+                                        <span className={`font-bold transition-colors ${
+                                          division.title.includes("Digital") ? "text-accent-magenta/60 group-hover/item:text-accent-magenta" :
+                                          division.title.includes("Labs") ? "text-accent-cyan/60 group-hover/item:text-accent-cyan" :
+                                          division.title.includes("Startup") ? "text-accent-green/60 group-hover/item:text-accent-green" :
+                                          "text-violet-500/60 group-hover/item:text-violet-600"
+                                        }`}>
+                                          *
+                                        </span>
+                                        <span className="leading-tight">{subItem.name}</span>
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
                             ))}
                           </div>
                         </div>
@@ -190,16 +259,45 @@ export default function Navbar() {
                             exit={{ opacity: 0, height: 0 }}
                             className="pl-4 overflow-hidden"
                           >
-                            <div className="py-2 space-y-1">
-                              {link.dropdown?.map((subItem) => (
-                                <Link
-                                  key={subItem.name}
-                                  to={subItem.href}
-                                  onClick={() => setIsOpen(false)}
-                                  className="block px-4 py-2 text-sm text-slate-500 hover:text-accent-magenta transition-colors"
-                                >
-                                  {subItem.name}
-                                </Link>
+                            <div className="py-3 px-2 space-y-6 text-left">
+                              {servicesMenuData.map((division) => (
+                                <div key={division.title} className="space-y-3">
+                                  <Link
+                                    to={division.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className="flex items-center gap-1.5 text-sm font-extrabold text-slate-800 uppercase tracking-wider pl-2 hover:text-slate-955 transition-colors"
+                                  >
+                                    <span className={
+                                      division.title.includes("Digital") ? "text-accent-magenta" :
+                                      division.title.includes("Labs") ? "text-accent-cyan" :
+                                      division.title.includes("Startup") ? "text-accent-green" :
+                                      "text-violet-650"
+                                    }>
+                                      ▼
+                                    </span>
+                                    {division.title}
+                                  </Link>
+                                  <div className="pl-4 space-y-2.5">
+                                    {division.items.map((subItem) => (
+                                      <Link
+                                        key={subItem.name}
+                                        to={subItem.href}
+                                        onClick={() => setIsOpen(false)}
+                                        className="py-1 text-sm text-slate-500 hover:text-slate-900 transition-colors flex items-start gap-2"
+                                      >
+                                        <span className={
+                                          division.title.includes("Digital") ? "text-accent-magenta/60" :
+                                          division.title.includes("Labs") ? "text-accent-cyan/60" :
+                                          division.title.includes("Startup") ? "text-accent-green/60" :
+                                          "text-violet-500/60"
+                                        }>
+                                          *
+                                        </span>
+                                        <span className="leading-tight">{subItem.name}</span>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
                               ))}
                             </div>
                           </motion.div>

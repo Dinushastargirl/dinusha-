@@ -23,6 +23,7 @@ import Packages from "./pages/Packages";
 import Contact from "./pages/Contact";
 import BeulexDigital from "./pages/BeulexDigital";
 import BeulexLabs from "./pages/BeulexLabs";
+import BeulexStartup from "./pages/BeulexStartup";
 import Portfolio from "./pages/Portfolio";
 import ServiceDetail from "./pages/ServiceDetail";
 import Ventures from "./pages/Ventures";
@@ -88,6 +89,7 @@ function AppContent() {
           <Route path="/services" element={<Services />} />
           <Route path="/services/digital" element={<BeulexDigital />} />
           <Route path="/services/labs" element={<BeulexLabs />} />
+          <Route path="/services/startup" element={<BeulexStartup />} />
           <Route path="/services/:division/:serviceId" element={<ServiceDetail />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/ventures" element={<Ventures />} />

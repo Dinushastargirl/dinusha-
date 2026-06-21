@@ -5,11 +5,20 @@ import { projects, Project } from "../data/projects";
 import { useState } from "react";
 
 export default function Portfolio() {
-  const [activeDivision, setActiveDivision] = useState<"All" | "Digital" | "Labs">("All");
+  const [activeDivision, setActiveDivision] = useState<"All" | "Digital" | "Labs" | "Startup">("All");
   const [subFilter, setSubFilter] = useState<string>("All");
 
   // Map categories to divisions
-  const getProjectDivision = (project: Project): "Digital" | "Labs" => {
+  const getProjectDivision = (project: Project): "Digital" | "Labs" | "Startup" => {
+    if (
+      project.id === "aurum-bookings" || 
+      project.id === "vork-global" || 
+      project.id === "laptop-rec" ||
+      project.id === "brand-caption" ||
+      project.id === "fellowship-tz"
+    ) {
+      return "Startup";
+    }
     if (
       project.category === "Website" || 
       project.category === "Branding" || 
@@ -43,6 +52,12 @@ export default function Portfolio() {
     if (subFilter === "AI Solutions") return project.category === "AI";
     if (subFilter === "Business Automation Systems") return project.category === "Automation";
 
+    // Startup sub-filters
+    if (subFilter === "MVP Planning") return project.category === "SaaS" || project.category === "Software";
+    if (subFilter === "Business Proposals") return project.category === "Branding" || project.id === "price-comparator";
+    if (subFilter === "Startup Launch") return project.category === "Website" || project.id === "vork-global";
+    if (subFilter === "Growth Strategy") return project.category === "Marketing" || project.id === "brand-caption" || project.id === "laptop-rec";
+
     return true;
   });
 
@@ -55,10 +70,13 @@ export default function Portfolio() {
     if (activeDivision === "Labs") {
       return ["All", "Software Systems", "SaaS Products", "Mobile Applications", "AI Solutions", "Business Automation Systems"];
     }
+    if (activeDivision === "Startup") {
+      return ["All", "MVP Planning", "Business Proposals", "Startup Launch", "Growth Strategy"];
+    }
     return ["All"];
   };
 
-  const handleDivisionChange = (division: "All" | "Digital" | "Labs") => {
+  const handleDivisionChange = (division: "All" | "Digital" | "Labs" | "Startup") => {
     setActiveDivision(division);
     setSubFilter("All");
   };
@@ -119,17 +137,20 @@ export default function Portfolio() {
         {/* Division Selector Tab */}
         <div className="flex justify-center mb-8 relative">
           <div className="bg-slate-50 p-1.5 rounded-full border border-slate-200 flex gap-1">
-            {(["All", "Digital", "Labs"] as const).map((div) => (
+            {(["All", "Digital", "Labs", "Startup"] as const).map((div) => (
               <button
                 key={div}
                 onClick={() => handleDivisionChange(div)}
                 className={`px-8 py-3 rounded-full text-sm font-bold transition-all relative ${
                   activeDivision === div
-                    ? "bg-accent-magenta text-white shadow-md"
+                    ? div === "All" ? "bg-slate-900 text-white shadow-md" :
+                      div === "Digital" ? "bg-accent-magenta text-white shadow-md" :
+                      div === "Labs" ? "bg-accent-cyan text-slate-950 shadow-md" :
+                      "bg-accent-green text-slate-950 shadow-md"
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
-                {div === "All" ? "All Divisions" : div === "Digital" ? "Beulex Digital" : "Beulex Labs"}
+                {div === "All" ? "All Divisions" : div === "Digital" ? "Beulex Digital" : div === "Labs" ? "Beulex Labs" : "Beulex Startup"}
               </button>
             ))}
           </div>
@@ -213,8 +234,10 @@ export default function Portfolio() {
                           <div className="absolute top-4 left-4 z-10">
                             <span className={`px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm border ${
                               division === "Digital"
-                                ? "bg-blue-500 text-white border-blue-600/20"
-                                : "bg-teal-500 text-white border-teal-600/20"
+                                ? "bg-accent-magenta text-white border-pink-650/20" :
+                              division === "Labs"
+                                ? "bg-accent-cyan text-slate-950 border-cyan-650/20" :
+                                "bg-accent-green text-slate-950 border-emerald-650/20"
                             }`}>
                               Beulex {division}
                             </span>
