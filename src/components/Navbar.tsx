@@ -31,17 +31,6 @@ const servicesMenuData = [
     ],
   },
   {
-    title: "Beulex Labs",
-    href: "/services/labs",
-    items: [
-      { name: "SaaS Development", href: "/services/labs/saas-development" },
-      { name: "Custom Software Development", href: "/services/labs/custom-software" },
-      { name: "AI Solutions", href: "/services/labs/ai-solutions" },
-      { name: "Business Automation", href: "/services/labs/business-automation" },
-      { name: "Mobile Apps", href: "/services/labs/mobile-applications" },
-    ],
-  },
-  {
     title: "Beulex Startup",
     href: "/services/startup",
     items: [
@@ -144,7 +133,7 @@ export default function Navbar() {
                         className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[980px] lg:w-[1100px]"
                       >
                         <div className="bg-white/95 backdrop-blur-2xl border border-slate-200/80 rounded-3xl overflow-hidden shadow-2xl p-8 text-left">
-                          <div className="grid grid-cols-4 gap-8">
+                          <div className="grid grid-cols-3 gap-8">
                             {servicesMenuData.map((division) => (
                               <div key={division.title} className="flex flex-col">
                                 <Link
